@@ -7,3 +7,6 @@ function subirProgreso(card) {
             barra.value = progreso + 10;
         }
     }
+    function irArriba(){
+       window.scrollTo({top: 0, behavior: `smooth`})
+    }
