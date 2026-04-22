@@ -267,3 +267,48 @@ button:active{
     font-size: 18px;
     color: #555;
 }
+.como-funciona,
+.precios,
+.tiempo {
+    padding: 40px;
+    text-align: center;
+}
+
+.como-funciona ol {
+    list-style: none;
+    padding: 0;
+}
+
+.como-funciona li {
+    margin: 10px 0;
+}
+
+.precios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-precio {
+    background: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+}
+
+.card-precio h3 {
+    margin-top: 10px;
+}
+
+.tiempo p {
+    font-size: 18px;
+}
+
+.aviso {
+    background: #ffcc00;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
