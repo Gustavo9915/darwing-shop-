@@ -242,3 +242,78 @@ button:active{
     padding: 10px 20px;
     cursor: pointer;
 }
+.faq {
+    padding: 30px;
+}
+
+.faq h2 {
+    text-align: center;
+}
+
+.faq details {
+    background: #111;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.estilos {
+    text-align: center;
+    padding: 30px;
+}
+
+.card-estilo {
+    display: inline-block;
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.horario {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    color: white;
+    border-radius: 20px;
+    margin: 30px;
+    box-shadow: 0 0 15px rgba(0,255,0,0.2);
+}
+
+.horario h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.horario p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Estado dinámico */
+.estado-horario {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    display: inline-block;
+}
+
+/* Animación suave */
+.estado-horario {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 1;
+        box-shadow: 0 0 5px rgba(0,255,0,0.3);
+    }
+    to {
+        opacity: 0.8;
+        box-shadow: 0 0 15px rgba(0,255,0,0.6);
+    }
+}
