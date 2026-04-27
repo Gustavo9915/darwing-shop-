@@ -359,7 +359,7 @@ footer{
     50% {opacity: 0.6;}
     100% {opacity: 1;}
 }
-.nino {
+.niño {
     background: linear-gradient(135deg, #a1c4fd, #c2ffd8);
     text-align: center;
     padding: 50px 20px;
@@ -367,7 +367,7 @@ footer{
     margin: 20px;
 }
 
-.nino h1 {
+.niño h1 {
     font-size: 30px;
 }
 
@@ -381,7 +381,7 @@ footer{
     margin-bottom: 20px;
 }
 
-.btn-nino {
+.btn-niño {
     background: #ffcc00;
     color: black;
     padding: 12px 25px;

@@ -312,3 +312,45 @@ button:active{
     text-align: center;
     font-weight: bold;
 }
+.evento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(90deg, #ff9a9e, #a1c4fd);
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.iconos {
+    font-size: 20px;
+}
+
+.btn-evento {
+    background: white;
+    color: #ff4d6d;
+    padding: 5px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-evento:hover {
+    background: black;
+    color: white;
+}
+
+/* Animación suave */
+.evento {
+    animation: brillo 2s infinite;
+}
+
+@keyframes brillo {
+    0% {opacity: 1;}
+    50% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
