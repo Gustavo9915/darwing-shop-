@@ -1,5 +1,5 @@
 body{
-    background: orange;
+    background: linear-gradient(135deg #ffe4e9 #ffc1cc);
     font-family: "Playwrite AU QLD", cursive;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -309,11 +309,11 @@ footer{
 }
 .madres {
     background: linear-gradient(135deg, #ff9a9e, #ff4d6d);
+    color: white;
     text-align: center;
     padding: 50px 20px;
     border-radius: 20px;
     margin: 20px;
-    color: white;
 }
 .madres h1 {
     font-size: 30px;
@@ -339,4 +339,23 @@ footer{
 .btn-madres:hover {
     background: black;
     color: white;
+}
+.urgente{
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.urgente {
+    animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+    0% {opacity: 1;}
+    50% {opacity: 0.6;}
+    100% {opacity: 1;}
 }
