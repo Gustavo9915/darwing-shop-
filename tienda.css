@@ -359,3 +359,37 @@ footer{
     50% {opacity: 0.6;}
     100% {opacity: 1;}
 }
+.nino {
+    background: linear-gradient(135deg, #a1c4fd, #c2ffd8);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.nino h1 {
+    font-size: 30px;
+}
+
+.mensaje {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.condicion {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-nino {
+    background: #ffcc00;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-nino:hover {
+    background: orange;
+}
