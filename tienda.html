@@ -198,6 +198,12 @@
             <button class="btn_compra"><a href="https://www.facebook.com/profile.php?id=61575061811037">Comprar aqui a $347</a></button>
         </div>
     </section>
+    <section class="madres">
+        <h1>💐 Especial Día de las Madres</h1>
+        <p class="mensaje">Regalaré 5 dibujos totalmente GRATIS</p>
+        <p class="condicion">⚠️ Solo para las primeras personas</p>
+        <button class="btn-madres" onclick="participar()">🎁 Participar</button>
+    </section>
     <a href="https://www.facebook.com/profile.php?id=61575061811037" class="btn-error" target="_blank">
         Reportar error
     </a>
@@ -229,6 +235,24 @@
         </div>
 
     </footer>
-    <script src="tienda.js"></script>
+    <script>
+    let cupos = 5;
+    function participar() {
+        if (cupos > 0) {
+            cupos--;
+                document.getElementById("cupos").innerText = cupos;
+                window.open(
+                    "https://wa.me/5215520956356?text=Quiero participar en el dibujo gratis del Día de las Madres",
+                    "_blank"
+                );
+
+                if (cupos === 0) {
+                     alert("❌ Ya no hay cupos disponibles");
+                }
+                } else {
+                    alert("❌ Cupos agotados");
+                }
+    }
+    </script>
 </body>
 </html>

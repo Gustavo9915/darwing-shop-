@@ -307,3 +307,36 @@ footer{
 .top:hover{
     background: #333;
 }
+.madres {
+    background: linear-gradient(135deg, #ff9a9e, #ff4d6d);
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 20px;
+    color: white;
+}
+.madres h1 {
+    font-size: 30px;
+}
+.mensaje {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.condicion {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.btn-madres {
+    background: white;
+    color: #ff4d6d;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-madres:hover {
+    background: black;
+    color: white;
+}
