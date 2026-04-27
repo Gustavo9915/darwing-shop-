@@ -254,13 +254,7 @@ button:active{
 .top:hover{
     background: #333;
 }
-.estado {
-    background: #111;
-    color: #0f0;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-}
+
 .gracias {
     text-align: center;
     margin: 30px 0;
@@ -352,5 +346,47 @@ button:active{
 @keyframes brillo {
     0% {opacity: 1;}
     50% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+.estado-pro {
+    background: #0d0d0d;
+    color: #fff;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,255,0,0.2);
+}
+
+.estado-pro h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.estado-linea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+/* Punto verde animado */
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #00ff00;
+    border-radius: 50%;
+    animation: parpadeo 1s infinite;
+}
+
+/* Iconos */
+.gear, .eye, .rocket {
+    font-size: 16px;
+}
+
+/* Animación */
+@keyframes parpadeo {
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
     100% {opacity: 1;}
 }
