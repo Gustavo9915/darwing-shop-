@@ -210,3 +210,55 @@ button:active{
 .top:hover{
     background: #333;
 }
+.oscuro {
+  background: #111;
+  color: white;
+}
+
+/* mejora otros elementos */
+.oscuro header,
+.oscuro footer,
+.oscuro .card,
+.oscuro .galeria img,
+.oscuro .menu_inicio {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* botón */
+.modo {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.modo:hover {
+  transform: scale(1.1);
+}
+.venta {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+.update {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
