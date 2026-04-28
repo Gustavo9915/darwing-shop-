@@ -216,3 +216,11 @@ a{
 .container_imagenfondo:hover .tooltip {
   opacity: 1;
 }
+.mini {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0.9;
+}
