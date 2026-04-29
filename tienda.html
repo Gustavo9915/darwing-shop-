@@ -204,6 +204,10 @@
         <p class="condicion">⚠️ Solo para las primeras personas</p>
         <button class="btn-madres" >🎁 Participar</button>
     </section>
+    <div class="contador-box">
+        <p class="titulo">Especial Día de las Madres</p>
+        <p id="contador">cargando...</p>
+    </div>
     <div class="contador-nino clean">
         <span class="icono">⏳</span>
         <span class="texto">Evento activo por tiempo limitado</span>
@@ -251,37 +255,7 @@
                 <img src="img/correo.png" alt="">
             </a>
         </div>
-
     </footer>
-    <script>
-    let cupos = localStorage.getItem("cupos");
-
-    if (cupos === null) {
-        cupos = 5;
-    } else {
-        cupos = parseInt(cupos);
-    }
-
-    document.getElementById("cupos").innerText = cupos;
-
-    function participar() {
-        if (cupos > 0) {
-            cupos--;
-            localStorage.setItem("cupos", cupos);
-            document.getElementById("cupos").innerText = cupos;
-
-                window.open(
-                    "https://wa.me/5215520956356?text=Quiero participar en el dibujo gratis del Día de las Madres",
-                    "_blank"
-                );
-
-            if (cupos === 0) {
-                alert("❌ Ya no hay cupos disponibles");
-            }
-             } else {
-                alert("❌ Cupos agotados");
-            }
-        }
-    </script>
+    <script src="tienda.js"></script>
 </body>
 </html>

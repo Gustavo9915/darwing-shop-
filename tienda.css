@@ -414,3 +414,22 @@ footer{
 .clean .texto {
     letter-spacing: 1px;
 }
+.contador-box {
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contador {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
