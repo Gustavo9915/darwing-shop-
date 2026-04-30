@@ -94,3 +94,11 @@ footer{
     opacity: 0.6;
     margin-top: 5px;
 }
+.oculto-texto {
+    display: none;
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
