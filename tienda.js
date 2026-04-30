@@ -68,3 +68,16 @@ let intervalo = setInterval(() =>{
     document.getElementById("contador").innerText =
     dias + "d " + horas + "h " + minutos  + "m " + segundos + "s";
 }, 1000);
+/*setTimeout(() =>{
+    document.getElementById("secreto").style.display = "block";
+    let suerte  = Math.random();
+    if(suerte < 0.1){
+        document.getElementById("codigoImg").style.display = "block";
+        let extra = document.createElement("p");
+        extra.innerText = "encontrasteel codigo secreto de la pagina"
+        extra.style.textAlign = "center";
+        extra.style.fontWeight = "bold";
+
+        document.body.appendChild(extra);
+    }
+}, 8000);*/
