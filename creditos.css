@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+     font-family: Arial;
+    font-family: "Edu NSW ACT Cursive", cursive;
     background: #111;
     color: white;
     text-align: center;
@@ -86,4 +87,10 @@ footer{
 
 .redes img:hover{
     transform: scale(1.2);
+}
+.detalle {
+    display: block;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 5px;
 }
