@@ -20,3 +20,15 @@ var x = setInterval(function(){
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
+function calificar(mun){
+   let estrellas = document.querySelectorAll(".estrellas span");
+   estrellas.forEach((estrella, index ) =>{
+        if(index < mun){
+            estrella.style.color = "gold"
+        }else{
+            estrella.style.color = "gray"
+        }
+   });
+   document.getElementById("resultado").innerText =
+    "calificaste con" + mun + "estrellas";
+}

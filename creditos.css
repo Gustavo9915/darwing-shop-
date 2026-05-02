@@ -102,3 +102,12 @@ footer{
     transform: translate(-50%, -50%);
     color: white;
 }
+.estrellas span{
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+    transition: 0.3s;
+}
+.estrellas span:hover{
+    color: gold;
+}
