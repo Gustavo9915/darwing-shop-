@@ -1,4 +1,50 @@
 body{
-     font-family: Arial;
+    font-family: Arial;
     font-family: "Edu NSW ACT Cursive", cursive;
+    background:black;
+    color:lime;
+    padding:20px;
+}
+
+/* ocultos */
+#secreto{
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:200px;
+}
+
+#mensaje{
+display:none;
+text-align:center;
+margin-top:20px;
+color:white;
+}
+.contenedor-secreto {
+    position: fixed;
+    top: 50%;
+    left: 65%; /* lo movemos más a la derecha */
+    transform: translate(-50%, -50%);
+}
+
+.img-oculta {
+    width: 350px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px lime;
+}
+
+/* texto encima */
+.texto-img {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: lime;
+    font-family: monospace;
+    font-size: 12px;
+    background: rgba(0,0,0,0.6);
+    padding: 5px;
+    border-radius: 5px;
 }
