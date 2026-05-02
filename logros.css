@@ -1,12 +1,14 @@
 body{
-    background:#111;
-    color:white;
-    text-align:center;
      font-family: Arial;
     font-family: "Edu NSW ACT Cursive", cursive;
 }
+body{
+    background:#111;
+    color:white;
+    text-align:center;
+}
 
-.update{
+.logro{
     background:#1a1a1a;
     margin:20px;
     padding:15px;
