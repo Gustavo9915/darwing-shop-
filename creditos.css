@@ -111,3 +111,14 @@ footer{
 .estrellas span:hover{
     color: gold;
 }
+.compartir button{
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.compartir button:hover{
+    background: #0056b3;
+}

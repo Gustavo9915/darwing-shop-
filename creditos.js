@@ -32,3 +32,15 @@ function calificar(mun){
    document.getElementById("resultado").innerText =
     "calificaste con" + mun + "estrellas";
 }
+function compartir(){
+    let url = window.location.href;
+    if(navigator.share){
+        navigator.share({
+            title: "mira mi pagina",
+            url: url
+        });
+    }else{
+        navigator.clipboard.writeText(url);
+        alert("link copiado");
+    }
+}

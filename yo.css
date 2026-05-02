@@ -219,15 +219,7 @@ button:active{
 .btn-error:hover{
     background: darkred;
 }
-.estrellas span{
-    font-size: 30px;
-    cursor: pointer;
-    color: gray;
-    transition: 0.3s;
-}
-.estrellas span:hover{
-    color: gold;
-}
+
 .compartir button{
     padding: 10px 20px;
     background: #007bff;
