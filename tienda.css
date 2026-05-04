@@ -458,3 +458,22 @@ footer{
   opacity: 1;
   color: lime;
 }
+.dev{
+    margin-top:10px;
+    font-family: monospace;
+    font-size:14px;
+    opacity:0.6;
+    cursor:pointer;
+}
+
+.extra{
+    opacity:0;
+    color:lime;
+    transition:0.3s;
+    font-size:12px;
+}
+
+/* hover */
+.dev:hover .extra{
+    opacity:1;
+}
