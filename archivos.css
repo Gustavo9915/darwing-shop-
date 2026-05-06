@@ -1,0 +1,91 @@
+body{
+    background:#000;
+    color:#00ff88;
+    font-family: monospace;
+    padding:20px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* archivos */
+.archivo{
+    padding:8px;
+    border:1px solid #00ff88;
+    width:250px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.archivo:hover{
+    background:#002b1a;
+}
+
+/* secreto */
+.extra{
+    opacity:0;
+    font-size:12px;
+    transition:0.3s;
+}
+
+/* hover */
+.secreto:hover .extra{
+    opacity:1;
+}
+#visor{
+    margin-top:20px;
+    padding:10px;
+    border:1px solid #00ff88;
+    width:300px;
+    min-height:80px;
+}
+footer{
+    background: #1f2c3a;
+    padding: 110px 0px;
+    text-align: center;
+    color: white;
+    background-image: url(img/Ruido.png);
+}
+.footer-contenido{
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer-logo{
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.footer-titulo{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.copyright{
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.redes img{
+    width: 80px;
+    transition: 0.3s;
+}
+
+.redes img:hover{
+    transform: scale(1.2);
+}
