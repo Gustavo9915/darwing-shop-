@@ -1,83 +1,59 @@
-function crearFlor(){
-    let flor = document.createElement("div");
-    flor.innerText = Math.random() > 0.5 ? "💐" : "💖";
+let fondos = [
 
-    flor.style.position = "fixed";
-    flor.style.left = Math.random() * 100 + "vw";
-    flor.style.top = "-30px"
-    flor.style.fontSize = "18px";
-    flor.style.opacity = "0.8";
-    flor.style.pointerEvents = "none";
-    flor.style.transition = "transform 4s linear";
+"linear-gradient(45deg,#1e1e2f,#2d3436)",
 
-    document.body.oppendChild(flor);
-    setTimeout(() =>{
-        flor.style.transform = "translateY(110vh)";
-    }, 10);
+"linear-gradient(45deg,#2d1b4d,#111827)",
 
-    setTimeout(() =>{
-        flor.remove();
-    }, 4000);
-}
-setInterval(crearFlor, 1200);
-    let cupos = localStorage.getItem("cupos");
+"linear-gradient(45deg,#3b1f2b,#1e272e)",
 
-    if (cupos === null) {
-        cupos = 5;
-    } else {
-        cupos = parseInt(cupos);
-    }
+"linear-gradient(45deg,#ff4d88,#2d3436)"
 
-    document.getElementById("cupos").innerText = cupos;
+];
 
-    function participar() {
-        if (cupos > 0) {
-            cupos--;
-            localStorage.setItem("cupos", cupos);
-            document.getElementById("cupos").innerText = cupos;
+setInterval(() => {
 
-                window.open(
-                    "https://wa.me/5215520956356?text=Quiero participar en el dibujo gratis del Día de las Madres",
-                    "_blank"
-                );
+  document.body.style.transition =
+    "2s";
 
-            if (cupos === 0) {
-                alert("❌ Ya no hay cupos disponibles");
-            }
-             } else {
-                alert("❌ Cupos agotados");
-            }
-        }
-let fecha = new Date("May 10, 2026 00:00:00").getTime();
-let intervalo = setInterval(() =>{
-    let ahora  = new Date().getTime();
-    let tiempo = fecha - ahora;
+  document.body.style.background =
+    fondos[Math.floor(Math.random()*fondos.length)];
 
-    if(tiempo <= 0){
-        clearInterval(intervalo);
-        document.getElementById("contador").innerText =
-        "ya esta activo el especial de las madres";
-        return;
-    }
-    let dias = Math.floor(tiempo / (1000 *60*60*24));
-    let horas = Math.floor((tiempo % (1000*60*60*24)) / (1000*60*60));
-    let minutos = Math.floor((tiempo % (1000*60*60)) / (1000*60));
-    let segundos = Math.floor((tiempo % (1000*60)) / 1000);
+}, 6000);
+
+setInterval(() => {
+
+  document.body.style.transition = "0.3s";
+
+  document.body.style.filter =
+    "brightness(1.15)";
+
+  setTimeout(() => {
+
+    document.body.style.filter =
+      "brightness(1)";
+
+  }, 200);
+
+}, 12000);
 
 
-    document.getElementById("contador").innerText =
-    dias + "d " + horas + "h " + minutos  + "m " + segundos + "s";
-}, 1000);
-/*setTimeout(() =>{
-    document.getElementById("secreto").style.display = "block";
-    let suerte  = Math.random();
-    if(suerte < 0.1){
-        document.getElementById("codigoImg").style.display = "block";
-        let extra = document.createElement("p");
-        extra.innerText = "encontrasteel codigo secreto de la pagina"
-        extra.style.textAlign = "center";
-        extra.style.fontWeight = "bold";
+document.querySelectorAll("img")
+.forEach(img => {
 
-        document.body.appendChild(extra);
-    }
-}, 8000);*/
+  img.addEventListener("mouseenter", () => {
+
+    img.style.transition = "0.3s";
+
+    img.style.transform =
+      "scale(1.05)";
+
+  });
+
+  img.addEventListener("mouseleave", () => {
+
+    img.style.transform =
+      "scale(1)";
+
+  });
+
+});
