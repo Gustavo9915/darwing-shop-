@@ -1,12 +1,12 @@
 // ======================================
-// 🎉 TEMA ANIVERSARIO TIENDA
+// 🎂 TEMA CUMPLEAÑOS TIENDA
 // ======================================
 
 window.onload = () => {
 
   cambiarTema();
 
-  introAniversario();
+  introCumple();
 
   particulas();
 
@@ -14,7 +14,9 @@ window.onload = () => {
 
   efectosCursor();
 
-  recuerdosDesarrollo();
+  sorpresaCumple();
+
+  clickSecretos();
 
 };
 
@@ -28,9 +30,10 @@ function cambiarTema() {
   `
   linear-gradient(
     45deg,
-    #0f2027,
-    #203a43,
-    #2c5364
+    #ff9a9e,
+    #fad0c4,
+    #fbc2eb,
+    #a18cd1
   )
   `;
 
@@ -49,10 +52,10 @@ function cambiarTema() {
 }
 
 // ======================================
-// 🎉 INTRO
+// 🎂 INTRO
 // ======================================
 
-function introAniversario() {
+function introCumple() {
 
   let intro =
     document.createElement("div");
@@ -61,16 +64,17 @@ function introAniversario() {
   `
   <div style="text-align:center;">
 
-    🎉 ANIVERSARIO 🎉
+    🎂 FELIZ CUMPLEAÑOS 🎂
 
     <br><br>
 
     <span style="
       font-size:0.5em;
-      color:#74b9ff;
+      color:#ffd6f6;
     ">
 
-      💖 Gracias por apoyar la página
+      💖 Esta tienda cambió
+      por un día especial ✨
 
     </span>
 
@@ -88,7 +92,7 @@ function introAniversario() {
   height:100%;
 
   background:
-  rgba(0,0,0,0.95);
+    rgba(0,0,0,0.92);
 
   display:flex;
 
@@ -102,7 +106,7 @@ function introAniversario() {
   z-index:999999;
 
   text-shadow:
-    0 0 20px #74b9ff;
+    0 0 20px white;
 
   animation:
     aparecer 1s ease;
@@ -111,6 +115,9 @@ function introAniversario() {
   document.body.appendChild(intro);
 
   setTimeout(() => {
+
+    intro.style.transition =
+      "1s";
 
     intro.style.opacity =
       "0";
@@ -136,10 +143,23 @@ function particulas() {
     let p =
       document.createElement("div");
 
+    const emojis = [
+
+      "🎂",
+      "💖",
+      "✨",
+      "🎈",
+      "🎉"
+
+    ];
+
     p.innerHTML =
-      Math.random() > 0.5
-      ? "✨"
-      : "💙";
+      emojis[
+        Math.floor(
+          Math.random() *
+          emojis.length
+        )
+      ];
 
     p.style =
     `
@@ -151,7 +171,7 @@ function particulas() {
 
     font-size:${15 + Math.random()*20}px;
 
-    opacity:0.8;
+    opacity:0.85;
 
     z-index:1;
 
@@ -187,15 +207,17 @@ function mensajesRandom() {
 
   let frases = [
 
-    "🎉 Gracias por este año",
+    "🎂 Hoy es un día especial",
 
-    "💖 Todo comenzó con una idea",
+    "💖 Gracias por visitar la tienda",
 
-    "✨ Gracias por apoyar mis dibujos",
+    "✨ Evento de cumpleaños activo",
 
-    "🎨 Se vienen nuevas sorpresas",
+    "🎁 Nuevas sorpresas desbloqueadas",
 
-    "👀 El aniversario apenas comienza"
+    "🎈 Espero que te guste esta mini actualización",
+
+    "👀 Easter eggs escondidos por toda la página"
 
   ];
 
@@ -213,11 +235,11 @@ function mensajesRandom() {
   transform:translateX(-50%);
 
   background:
-    rgba(0,0,0,0.6);
+    rgba(0,0,0,0.65);
 
-  padding:12px 22px;
+  padding:14px 24px;
 
-  border-radius:15px;
+  border-radius:18px;
 
   color:white;
 
@@ -225,8 +247,11 @@ function mensajesRandom() {
 
   z-index:99999;
 
+  backdrop-filter:blur(6px);
+
   box-shadow:
-    0 0 15px #74b9ff;
+    0 0 15px #ff4d88,
+    0 0 25px #ffffff;
   `;
 
   document.body.appendChild(box);
@@ -318,15 +343,15 @@ function efectosCursor() {
 }
 
 // ======================================
-// 👀 RECUERDOS
+// 🎁 SORPRESA
 // ======================================
 
-function recuerdosDesarrollo() {
+function sorpresaCumple() {
 
   let probabilidad =
     Math.random();
 
-  if (probabilidad > 0.20) return;
+  if (probabilidad > 0.25) return;
 
   let box =
     document.createElement("div");
@@ -342,44 +367,43 @@ function recuerdosDesarrollo() {
     translate(-50%,-50%);
 
   background:
-    rgba(0,0,0,0.95);
+    rgba(0,0,0,0.92);
 
   padding:25px;
 
   border-radius:25px;
 
   box-shadow:
-    0 0 25px #74b9ff;
+    0 0 25px #ff4d88;
 
   z-index:999999;
 
   text-align:center;
+
+  max-width:500px;
   `;
 
   box.innerHTML =
   `
-  <h2 style="color:#74b9ff;">
-    👀 RECUERDOS
+  <h2 style="color:#ffd6f6;">
+
+    🎂 MENSAJE ESPECIAL
+
   </h2>
 
-  <img
-  src="img/desarr.png"
-  style="
-    width:220px;
-    border-radius:15px;
-    margin:10px;
+  <p style="
+    color:white;
+    line-height:1.7;
   ">
 
-  <img
-  src="img/fase1.png"
-  style="
-    width:220px;
-    border-radius:15px;
-    margin:10px;
-  ">
+    💖 Gracias por ser
+    una persona tan especial ✨
 
-  <p style="color:white;">
-    💖 Así empezó la página
+    <br><br>
+
+    Espero que tengas
+    un cumpleaños increíble 🎈
+
   </p>
   `;
 
@@ -389,7 +413,112 @@ function recuerdosDesarrollo() {
 
     box.remove();
 
-  }, 8000);
+  }, 7000);
+
+}
+
+// ======================================
+// 👀 CLICK SECRETOS
+// ======================================
+
+function clickSecretos() {
+
+  const mensajes = [
+
+    "💖 Feliz cumpleaños",
+
+    "🎂 Mini sorpresa encontrada",
+
+    "✨ Easter egg desbloqueado",
+
+    "🎈 Espero que sonrías hoy",
+
+    "🎁 Mensaje secreto detectado",
+
+    "💌 Gracias por visitar la tienda"
+
+  ];
+
+  let bloqueado = false;
+
+  document.addEventListener("click", (e) => {
+
+    if (bloqueado) return;
+
+    bloqueado = true;
+
+    const msg =
+      document.createElement("div");
+
+    msg.innerHTML =
+      mensajes[
+        Math.floor(
+          Math.random() *
+          mensajes.length
+        )
+      ];
+
+    msg.style =
+    `
+    position:fixed;
+
+    left:${e.clientX}px;
+
+    top:${e.clientY}px;
+
+    transform:
+      translate(-50%,-50%);
+
+    background:
+      rgba(0,0,0,0.88);
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    z-index:999999;
+
+    pointer-events:none;
+
+    backdrop-filter:blur(6px);
+
+    box-shadow:
+      0 0 15px #ff4d88,
+      0 0 25px white;
+    `;
+
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+
+      msg.style.transition =
+        "1.5s";
+
+      msg.style.opacity =
+        "0";
+
+      msg.style.transform =
+        "translate(-50%,-90px) scale(0.9)";
+
+    }, 2500);
+
+    setTimeout(() => {
+
+      msg.remove();
+
+    }, 4000);
+
+    setTimeout(() => {
+
+      bloqueado = false;
+
+    }, 1200);
+
+  });
 
 }
 
@@ -436,4 +565,3 @@ style.innerHTML =
 `;
 
 document.head.appendChild(style);
-
