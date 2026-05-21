@@ -17,6 +17,8 @@ window.onload = () => {
   sorpresaCumple();
 
   clickSecretos();
+  botonSecreto();
+  segundaCarta();
 
 };
 
@@ -565,3 +567,331 @@ style.innerHTML =
 `;
 
 document.head.appendChild(style);
+// ======================================
+// 👀 BOTON SECRETO
+// ======================================
+
+function botonSecreto() {
+
+  const btn =
+    document.getElementById(
+      "btnSecreto"
+    );
+
+  if (!btn) return;
+
+  btn.addEventListener(
+    "click",
+
+    () => {
+
+      // 👀 evitar duplicados
+      if (
+        document.getElementById(
+          "sorpresaSecreta"
+        )
+      ) return;
+
+      // ======================================
+      // 🎁 SORPRESA
+      // ======================================
+
+      const box =
+        document.createElement(
+          "div"
+        );
+
+      box.id =
+        "sorpresaSecreta";
+
+      box.innerHTML =
+      `
+      <div style="
+        font-size:1.2em;
+        margin-bottom:15px;
+      ">
+
+        👀 SORPRESA
+
+      </div>
+
+      <div style="
+        font-size:0.5em;
+        line-height:1.8;
+      ">
+
+        🎂 Encontraste
+        el botón secreto ✨
+
+        <br><br>
+
+        💖 Gracias por visitar
+        esta pequeña actualización
+
+        <br><br>
+
+        🎈 Evento especial activo
+
+      </div>
+
+      <br>
+
+      <button id="cerrarSorpresa">
+
+        Cerrar
+
+      </button>
+      `;
+
+      box.style =
+      `
+      position:fixed;
+
+      top:50%;
+      left:50%;
+
+      transform:
+        translate(-50%,-50%);
+
+      background:
+        rgba(0,0,0,0.92);
+
+      color:white;
+
+      padding:35px;
+
+      border-radius:25px;
+
+      text-align:center;
+
+      z-index:999999;
+
+      font-size:2em;
+
+      max-width:500px;
+
+      box-shadow:
+        0 0 20px #00ffcc,
+        0 0 35px white;
+
+      animation:
+        aparecer 0.7s ease;
+      `;
+
+      document.body.appendChild(
+        box
+      );
+
+      // ======================================
+      // ❌ CERRAR
+      // ======================================
+
+      const cerrar =
+        document.getElementById(
+          "cerrarSorpresa"
+        );
+
+      cerrar.style =
+      `
+      margin-top:15px;
+
+      padding:10px 20px;
+
+      border:none;
+
+      border-radius:15px;
+
+      background:#00b894;
+
+      color:white;
+
+      cursor:pointer;
+      `;
+
+      cerrar.addEventListener(
+        "click",
+
+        () => {
+
+          box.style.transition =
+            "0.5s";
+
+          box.style.opacity =
+            "0";
+
+          setTimeout(() => {
+
+            box.remove();
+
+          }, 500);
+
+        }
+
+      );
+
+    }
+
+  );
+
+}
+// ======================================
+// 💖 SEGUNDA CARTA
+// ======================================
+
+function segundaCarta() {
+
+  const btn =
+    document.getElementById(
+      "btnCarta2"
+    );
+
+  if (!btn) return;
+
+  btn.addEventListener(
+    "click",
+
+    () => {
+
+      if (
+        document.getElementById(
+          "segundaCarta"
+        )
+      ) return;
+
+      const carta =
+        document.createElement(
+          "div"
+        );
+
+      carta.id =
+        "segundaCarta";
+
+      carta.innerHTML =
+      `
+      <div style="
+        font-size:1.2em;
+        margin-bottom:15px;
+      ">
+
+        💖 Mensaje Especial
+
+      </div>
+
+      <div style="
+        font-size:0.5em;
+        line-height:1.8;
+      ">
+
+        🎂 Gracias por todos
+        los momentos bonitos ✨
+
+        <br><br>
+
+        💖 Espero que este día
+        sea increíble para ti
+
+        <br><br>
+
+        🎈 Feliz cumpleaños
+
+      </div>
+
+      <br>
+
+      <button id="cerrarCarta2">
+
+        Cerrar
+
+      </button>
+      `;
+
+      carta.style =
+      `
+      position:fixed;
+
+      top:50%;
+      left:50%;
+
+      transform:
+        translate(-50%,-50%);
+
+      background:
+        rgba(0,0,0,0.92);
+
+      color:white;
+
+      padding:35px;
+
+      border-radius:25px;
+
+      text-align:center;
+
+      z-index:999999;
+
+      font-size:2em;
+
+      max-width:500px;
+
+      box-shadow:
+        0 0 20px #ff4d88,
+        0 0 35px white;
+
+      animation:
+        aparecer 0.7s ease;
+      `;
+
+      document.body.appendChild(
+        carta
+      );
+
+      const cerrar =
+        document.getElementById(
+          "cerrarCarta2"
+        );
+
+      cerrar.style =
+      `
+      margin-top:15px;
+
+      padding:10px 20px;
+
+      border:none;
+
+      border-radius:15px;
+
+      background:#ff4d88;
+
+      color:white;
+
+      cursor:pointer;
+      `;
+
+      cerrar.addEventListener(
+        "click",
+
+        () => {
+
+          carta.style.transition =
+            "0.5s";
+
+          carta.style.opacity =
+            "0";
+
+          carta.style.transform =
+            "translate(-50%,-50%) scale(0.8)";
+
+          setTimeout(() => {
+
+            carta.remove();
+
+          }, 500);
+
+        }
+
+      );
+
+    }
+
+  );
+
+}
