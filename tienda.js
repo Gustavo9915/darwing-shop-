@@ -19,7 +19,15 @@ window.onload = () => {
   clickSecretos();
   botonSecreto();
   segundaCarta();
+  fotoEspecial();
+  modoNoche();
+    textoMaquina();
 
+  miniPastel();
+
+  cartasSecretas();
+
+  modoSecreto();
 };
 
 // ======================================
@@ -889,6 +897,820 @@ function segundaCarta() {
         }
 
       );
+
+    }
+
+  );
+
+}
+// ======================================
+// 💖 FOTO ESPECIAL
+// ======================================
+
+function fotoEspecial() {
+
+  const box =
+    document.getElementById(
+      "fotoEspecial"
+    );
+
+  if (!box) return;
+
+  box.innerHTML =
+  `
+  <div style="
+    margin-top:30px;
+    text-align:center;
+  ">
+
+    <img
+      src="img/fami.jpg"
+
+      style="
+        width:260px;
+        max-width:90%;
+
+        border-radius:25px;
+
+        border:4px solid #ffb6c1;
+
+        box-shadow:
+          0 0 20px #ff4d88,
+          0 0 35px white;
+
+        transition:0.4s;
+      ">
+
+    <p style="
+      margin-top:15px;
+
+      font-size:20px;
+
+      color:white;
+
+      line-height:1.7;
+
+      text-shadow:
+        0 0 10px #ff4d88;
+    ">
+
+      💖 Te quiero mucho
+      y siempre te veré
+      como una segunda mamá ✨
+
+    </p>
+
+  </div>
+  `;
+
+}
+const frases = [
+
+  "💖 Gracias por acompañarme",
+
+  "✨ Eres muy importante para mí",
+
+  "🎂 Espero verte sonreír hoy",
+
+  "💖 Gracias por cuidar de mí",
+
+  "🎈 Feliz cumpleaños",
+
+  "✨ Siempre estás conmigo",
+
+  "💖 Te quiero mucho",
+
+  "🎂 Este evento fue hecho para ti"
+
+];
+// ======================================
+// 🌙 MODO NOCHE
+// ======================================
+
+function modoNoche() {
+
+  const hora =
+    new Date().getHours();
+
+  // 👀 DESPUES DE LAS 7PM
+  if (hora >= 19) {
+
+    document.body.style.background =
+    `
+    linear-gradient(
+      45deg,
+      #090909,
+      #1a1a40,
+      #000
+    )
+    `;
+
+    document.body.style.boxShadow =
+      "0 0 40px #ff4d88";
+
+  }
+
+}
+// ======================================
+// 👀 MENSAJES SECRETOS
+// ======================================
+
+function mensajesClick() {
+
+  const mensajes = [
+
+    "💖 Gracias por estar aquí",
+
+    "✨ Feliz cumpleaños",
+
+    "🎂 Espero que te guste",
+
+    "💖 Eres muy importante para mí",
+
+    "🎈 Gracias por cuidarme",
+
+    "✨ Te quiero mucho"
+
+  ];
+
+  let indice = 0;
+
+  document.addEventListener(
+    "click",
+
+    (e) => {
+
+      // 👀 UNO POR UNO
+      const texto =
+        mensajes[indice];
+
+      indice++;
+
+      if (indice >= mensajes.length) {
+
+        indice = 0;
+
+      }
+
+      const msg =
+        document.createElement(
+          "div"
+        );
+
+      msg.innerHTML =
+        texto;
+
+      msg.style =
+      `
+      position:fixed;
+
+      left:${e.clientX}px;
+
+      top:${e.clientY}px;
+
+      color:white;
+
+      background:
+        rgba(0,0,0,0.75);
+
+      padding:12px 18px;
+
+      border-radius:15px;
+
+      font-size:18px;
+
+      z-index:999999;
+
+      pointer-events:none;
+
+      box-shadow:
+        0 0 15px #ff4d88;
+
+      animation:
+        aparecer 0.5s ease;
+      `;
+
+      document.body.appendChild(
+        msg
+      );
+
+      // 👀 quedarse más tiempo
+      setTimeout(() => {
+
+        msg.style.transition =
+          "1s";
+
+        msg.style.opacity =
+          "0";
+
+        msg.style.transform =
+          "translateY(-20px)";
+
+      }, 3500);
+
+      setTimeout(() => {
+
+        msg.remove();
+
+      }, 4500);
+
+    }
+
+  );
+
+}
+// ======================================
+// 👀 MENSAJE AL ENTRAR
+// ======================================
+
+window.addEventListener(
+
+  "load",
+
+  () => {
+
+    const frases = [
+
+      "🎂 Bienvenida al evento",
+
+      "💖 Todo esto fue hecho para ti",
+
+      "✨ Espero que te guste la sorpresa",
+
+      "🎈 Feliz cumpleaños"
+
+    ];
+
+    const msg =
+      document.createElement("div");
+
+    msg.innerHTML =
+      frases[
+        Math.floor(
+          Math.random() *
+          frases.length
+        )
+      ];
+
+    msg.style =
+    `
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:
+      translateX(-50%);
+
+    background:
+      rgba(0,0,0,0.85);
+
+    padding:15px 25px;
+
+    border-radius:20px;
+
+    color:white;
+
+    z-index:999999;
+
+    box-shadow:
+      0 0 20px #ff4d88;
+
+    animation:
+      aparecerClick 0.5s ease;
+    `;
+
+    document.body.appendChild(
+      msg
+    );
+
+    setTimeout(() => {
+
+      msg.style.transition =
+        "1s";
+
+      msg.style.opacity =
+        "0";
+
+      msg.style.top =
+        "-100px";
+
+    }, 3500);
+
+    setTimeout(() => {
+
+      msg.remove();
+
+    }, 4500);
+
+  }
+
+);
+
+// ======================================
+// 🎁 SORPRESA FINAL
+// ======================================
+
+const btnUltra =
+  document.getElementById(
+    "btnUltra"
+  );
+
+if (btnUltra) {
+
+  btnUltra.addEventListener(
+
+    "click",
+
+    () => {
+
+      // 👀 evitar duplicados
+      if (
+        document.getElementById(
+          "popupFinal"
+        )
+      ) return;
+
+      const popup =
+        document.createElement(
+          "div"
+        );
+
+      popup.id =
+        "popupFinal";
+
+      popup.innerHTML =
+      `
+      <div style="
+        font-size:1.2em;
+        margin-bottom:20px;
+      ">
+
+        🎁 SORPRESA FINAL 🎁
+
+      </div>
+
+      <div style="
+        font-size:0.5em;
+        line-height:1.8;
+      ">
+
+        💖 Gracias por estar aquí
+
+        <br><br>
+
+        🎂 Este pequeño evento
+        fue hecho con cariño
+        para sacarte una sonrisa ✨
+
+        <br><br>
+
+        💌 Feliz cumpleaños 💌
+
+      </div>
+
+      <br>
+
+      <button id="cerrarFinal">
+
+        Cerrar
+
+      </button>
+      `;
+
+      popup.style =
+      `
+      position:fixed;
+
+      top:50%;
+      left:50%;
+
+      transform:
+        translate(-50%,-50%);
+
+      background:
+        rgba(0,0,0,0.94);
+
+      color:white;
+
+      padding:35px;
+
+      border-radius:25px;
+
+      text-align:center;
+
+      z-index:999999;
+
+      font-size:2em;
+
+      width:90%;
+
+      max-width:600px;
+
+      backdrop-filter:blur(8px);
+
+      box-shadow:
+        0 0 25px #ff4d88,
+        0 0 40px white;
+
+      animation:
+        aparecerClick 0.5s ease;
+      `;
+
+      document.body.appendChild(
+        popup
+      );
+
+      // ✨ PARTICULAS
+      for (let i = 0; i < 35; i++) {
+
+        const p =
+          document.createElement(
+            "div"
+          );
+
+        const emojis = [
+
+          "🎂",
+          "💖",
+          "✨",
+          "🎈"
+
+        ];
+
+        p.innerHTML =
+          emojis[
+            Math.floor(
+              Math.random() *
+              emojis.length
+            )
+          ];
+
+        p.style =
+        `
+        position:fixed;
+
+        left:${Math.random()*100}%;
+
+        top:${Math.random()*100}%;
+
+        font-size:25px;
+
+        z-index:999999;
+
+        pointer-events:none;
+        `;
+
+        document.body.appendChild(
+          p
+        );
+
+        setTimeout(() => {
+
+          p.remove();
+
+        }, 3000);
+
+      }
+
+      // ❌ CERRAR
+      const cerrar =
+        document.getElementById(
+          "cerrarFinal"
+        );
+
+      cerrar.style =
+      `
+      margin-top:15px;
+
+      padding:12px 20px;
+
+      border:none;
+
+      border-radius:15px;
+
+      background:#ff4d88;
+
+      color:white;
+
+      cursor:pointer;
+
+      font-size:18px;
+      `;
+
+      cerrar.addEventListener(
+
+        "click",
+
+        () => {
+
+          popup.style.transition =
+            "0.5s";
+
+          popup.style.opacity =
+            "0";
+
+          popup.style.transform =
+            "translate(-50%,-50%) scale(0.8)";
+
+          setTimeout(() => {
+
+            popup.remove();
+
+          }, 500);
+
+        }
+
+      );
+
+    }
+
+  );
+
+}
+// ======================================
+// ✨ TEXTO ESCRIBIENDOSE SOLO
+// ======================================
+
+function textoMaquina() {
+
+  const frases = [
+
+    "💖 Bienvenida al mini evento",
+    "🎂 Feliz cumpleaños",
+    "✨ Todo esto fue hecho para ti",
+    "🎁 Gracias por estar aquí"
+
+  ];
+
+  const texto =
+    document.getElementById(
+      "randomMsg"
+    );
+
+  if (!texto) return;
+
+  let fraseIndex = 0;
+  let letraIndex = 0;
+
+  function escribir() {
+
+    if (
+      letraIndex <
+      frases[fraseIndex].length
+    ) {
+
+      texto.innerHTML +=
+        frases[fraseIndex].charAt(
+          letraIndex
+        );
+
+      letraIndex++;
+
+      setTimeout(
+        escribir,
+        70
+      );
+
+    }
+
+    else {
+
+      setTimeout(() => {
+
+        texto.innerHTML = "";
+
+        letraIndex = 0;
+
+        fraseIndex++;
+
+        if (
+          fraseIndex >=
+          frases.length
+        ) {
+
+          fraseIndex = 0;
+
+        }
+
+        escribir();
+
+      }, 2500);
+
+    }
+
+  }
+
+  escribir();
+
+}
+// ======================================
+// 🎂 MINI PASTEL ANIMADO
+// ======================================
+
+function miniPastel() {
+
+  const pastel =
+    document.createElement(
+      "div"
+    );
+
+  pastel.innerHTML =
+  `
+  🎂
+  `;
+
+  pastel.style =
+  `
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  font-size:60px;
+
+  z-index:99999;
+
+  animation:
+    pastelBounce 2s infinite;
+  `;
+
+  document.body.appendChild(
+    pastel
+  );
+
+}
+// ======================================
+// 💌 CARTAS DESBLOQUEABLES
+// ======================================
+
+function cartasSecretas() {
+
+  let clicks = 0;
+
+  document.addEventListener(
+
+    "click",
+
+    () => {
+
+      clicks++;
+
+      // 💌 cada 15 clicks
+      if (clicks === 15) {
+
+        mostrarCarta(
+          "💌 Carta desbloqueada",
+          "💖 Gracias por todo"
+        );
+
+      }
+
+      // 🎂 otra carta
+      if (clicks === 30) {
+
+        mostrarCarta(
+          "🎂 Nueva sorpresa",
+          "✨ Espero que sonrías mucho hoy"
+        );
+
+      }
+
+    }
+
+  );
+
+}
+
+// ======================================
+// 💖 MOSTRAR CARTA
+// ======================================
+
+function mostrarCarta(
+  titulo,
+  mensaje
+) {
+
+  const carta =
+    document.createElement(
+      "div"
+    );
+
+  carta.innerHTML =
+  `
+  <h2>${titulo}</h2>
+
+  <p>${mensaje}</p>
+  `;
+
+  carta.style =
+  `
+  position:fixed;
+
+  top:50%;
+  left:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  background:
+    rgba(0,0,0,0.92);
+
+  color:white;
+
+  padding:30px;
+
+  border-radius:25px;
+
+  z-index:999999;
+
+  text-align:center;
+
+  box-shadow:
+    0 0 25px #ff4d88;
+  `;
+
+  document.body.appendChild(
+    carta
+  );
+
+  setTimeout(() => {
+
+    carta.remove();
+
+  }, 5000);
+
+}// ======================================
+// 👀 MODO SECRETO
+// ======================================
+
+function modoSecreto() {
+
+  let clicks = 0;
+
+  document.addEventListener(
+
+    "click",
+
+    () => {
+
+      clicks++;
+
+      // 👀 activar
+      if (clicks >= 50) {
+
+        document.body.style.filter =
+          "hue-rotate(120deg)";
+
+        const secreto =
+          document.createElement(
+            "div"
+          );
+
+        secreto.innerHTML =
+        `
+        👀 MODO SECRETO ACTIVADO
+        `;
+
+        secreto.style =
+        `
+        position:fixed;
+
+        top:50%;
+        left:50%;
+
+        transform:
+          translate(-50%,-50%);
+
+        background:black;
+
+        color:#00ffcc;
+
+        padding:25px;
+
+        border-radius:20px;
+
+        font-size:2em;
+
+        z-index:999999;
+
+        box-shadow:
+          0 0 25px #00ffcc;
+        `;
+
+        document.body.appendChild(
+          secreto
+        );
+
+        setTimeout(() => {
+
+          secreto.remove();
+
+        }, 4000);
+
+      }
 
     }
 
