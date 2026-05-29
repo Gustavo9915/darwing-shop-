@@ -2570,3 +2570,150 @@ style.innerHTML =
 document.head.appendChild(
   style
 );
+// ======================================
+// 👀 SPOILER SECRETO
+// ======================================
+
+function spoilerUpdate() {
+
+  let clicks = 0;
+  let mostrado = false;
+
+  document.addEventListener(
+
+    "click",
+
+    () => {
+
+      clicks++;
+
+      // 👀 APARECE A LOS 40 CLICKS
+      if (
+        clicks >= 40 &&
+        !mostrado
+      ) {
+
+        mostrado = true;
+
+        const spoiler =
+          document.createElement(
+            "div"
+          );
+
+        spoiler.innerHTML =
+        `
+        <div style="
+          font-size:1.2em;
+          margin-bottom:20px;
+        ">
+
+          👀 SPOILER DETECTADO
+
+        </div>
+
+        <div style="
+          font-size:0.5em;
+          line-height:1.8;
+        ">
+
+          [ ACCESO LIMITADO ]
+
+          <br><br>
+
+          La siguiente actualización
+          incluirá algo que nunca había
+          estado en el proyecto.
+
+          <br><br>
+
+          🛠️ Nuevos sistemas
+          <br>
+          📂 Nuevos secretos
+          <br>
+          🎮 Nuevas sorpresas
+
+          <br><br>
+
+          Estado actual:
+
+          <br>
+
+          █████████░ 98%
+
+          <br><br>
+
+          ⚠️ Más información
+          próximamente...
+
+        </div>
+        `;
+
+        spoiler.style =
+        `
+        position:fixed;
+
+        top:50%;
+        left:50%;
+
+        transform:
+          translate(-50%,-50%);
+
+        background:
+          rgba(0,0,0,0.94);
+
+        color:white;
+
+        padding:35px;
+
+        border-radius:25px;
+
+        text-align:center;
+
+        z-index:999999;
+
+        font-size:2em;
+
+        width:90%;
+
+        max-width:650px;
+
+        backdrop-filter:blur(8px);
+
+        box-shadow:
+          0 0 25px #74b9ff,
+          0 0 45px #00d2ff;
+
+        animation:
+          aparecerClick 0.6s ease;
+        `;
+
+        document.body.appendChild(
+          spoiler
+        );
+
+        setTimeout(() => {
+
+          spoiler.style.transition =
+            "1s";
+
+          spoiler.style.opacity =
+            "0";
+
+        }, 8000);
+
+        setTimeout(() => {
+
+          spoiler.remove();
+
+        }, 9000);
+
+      }
+
+    }
+
+  );
+
+}
+
+// 🚀 ACTIVAR
+spoilerUpdate();
