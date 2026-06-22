@@ -1,212 +1,266 @@
 // ======================================
+// 🇲🇽 UPDATE INDEPENDENCIA 2026
+// ======================================
+
+// Fecha del lanzamiento
+const fechaLanzamiento = new Date("September 16, 2026 00:00:00");
+
+// ======================================
+// ⏳ CUENTA REGRESIVA
+// ======================================
+
+function cuentaRegresiva() {
+
+    const hoy = new Date();
+
+    const diferencia =
+        fechaLanzamiento - hoy;
+
+    const dias =
+        Math.max(
+            0,
+            Math.floor(
+                diferencia /
+                (1000 * 60 * 60 * 24)
+            )
+        );
+
+    return dias;
+
+}
+
+// ======================================
 // 👀 MENSAJES SECRETOS DEL DESARROLLADOR
 // ======================================
 
 function mensajesDev() {
 
-  const logs = [
+    const dias = cuentaRegresiva();
 
-    "[DEV] iniciando sistema...",
-    "[DEV] compilando update...",
-    "[DEV] cargando secretos...",
-    "[DEV] revisando errores...",
-    "[DEV] optimizando version movil...",
-    "[DEV] preparando nueva experiencia...",
-    "[DEV] sincronizando archivos...",
-    "[DEV] cargando easter eggs...",
-    "[DEV] fase final detectada...",
-    "[DEV] acceso autorizado..."
-  ];
+    const logs = [
 
-  setInterval(() => {
+        "[DEV] iniciando Update Independencia...",
+        "[DEV] compilando update del 16 de septiembre...",
+        "[DEV] preparando fuegos artificiales...",
+        "[DEV] creando nuevos secretos...",
+        "[DEV] optimizando version movil...",
+        "[DEV] agregando mejoras visuales...",
+        "[DEV] cargando evento patrio...",
+        "[DEV] generando trailer 2...",
+        "[DEV] ocultando archivos secretos...",
+        "[DEV] faltan " + dias + " dias..."
 
-    const msg =
-      document.createElement("div");
+    ];
 
-    msg.innerHTML =
-      logs[Math.floor(
-        Math.random() *
-        logs.length
-      )];
+    setInterval(() => {
 
-    msg.style = `
-      position:fixed;
-      top:${Math.random()*85}%;
-      left:${Math.random()*85}%;
+        const msg =
+            document.createElement("div");
 
-      color:#00ffcc;
-      font-family:monospace;
-      font-size:${14 + Math.random()*10}px;
+        msg.innerHTML =
+            logs[
+                Math.floor(
+                    Math.random() *
+                    logs.length
+                )
+            ];
 
-      z-index:999999;
-      pointer-events:none;
+        msg.style = `
+            position:fixed;
+            top:${Math.random()*85}%;
+            left:${Math.random()*85}%;
 
-      opacity:0.9;
+            color:${
+                ["#00ff66","#ffffff","#ff3333"][
+                    Math.floor(Math.random()*3)
+                ]
+            };
 
-      text-shadow:
-      2px 0 red,
-      -2px 0 blue,
-      0 0 15px #00ffcc;
-    `;
+            font-family:monospace;
 
-    document.body.appendChild(msg);
+            font-size:${14 + Math.random()*10}px;
 
-    setTimeout(() => {
+            z-index:999999;
 
-      msg.style.transition =
-        "0.5s";
+            pointer-events:none;
 
-      msg.style.opacity =
-        "0";
+            opacity:.9;
 
-    }, 1800);
+            text-shadow:
+            0 0 15px white;
+        `;
 
-    setTimeout(() => {
+        document.body.appendChild(msg);
 
-      msg.remove();
+        setTimeout(()=>{
 
-    }, 2500);
+            msg.style.transition=".5s";
 
-  }, 6000);
+            msg.style.opacity="0";
+
+        },1800);
+
+        setTimeout(()=>{
+
+            msg.remove();
+
+        },2500);
+
+    },6000);
 
 }
 
 // ======================================
-// ⚠️ DEV LOGS OCULTOS
+// ⚠️ DEV LOGS
 // ======================================
 
 function devLogs() {
 
-  const mensajes = [
+    setInterval(()=>{
 
-    "update_final.rar 98%",
-    "mobile_update.rar 40%",
-    "nuevos secretos detectados",
-    "fase_final.exe ejecutandose",
-    "glitches cargados",
-    "evento oculto preparado",
-    "spoiler bloqueado",
-    "next_update.rar protegido"
-  ];
+        if(Math.random()>0.5){
 
-  setInterval(() => {
+            const dias =
+                cuentaRegresiva();
 
-    if (Math.random() > 0.5) {
+            const mensajes=[
 
-      const log =
-        document.createElement("div");
+                "update_independencia.rar 35%",
+                "calidad_visual 98%",
+                "evento patrio preparado",
+                "trailer_02.mp4 listo",
+                "spoiler bloqueado",
+                "nuevas imagenes cargadas",
+                "version movil optimizada",
+                "faltan "+dias+" dias",
+                "16_sep_update.exe",
+                "secretos activos"
 
-      log.innerHTML =
-        mensajes[Math.floor(
-          Math.random() *
-          mensajes.length
-        )];
+            ];
 
-      log.style = `
-        position:fixed;
+            const log =
+                document.createElement("div");
 
-        bottom:20px;
-        left:20px;
+            log.innerHTML =
+                mensajes[
+                    Math.floor(
+                        Math.random()*
+                        mensajes.length
+                    )
+                ];
 
-        color:#00ffcc;
+            log.style=`
+                position:fixed;
 
-        font-family:monospace;
+                bottom:20px;
+                left:20px;
 
-        background:
-        rgba(0,0,0,0.8);
+                background:rgba(0,0,0,.85);
 
-        padding:10px;
+                color:#00ff66;
 
-        border-radius:10px;
+                font-family:monospace;
 
-        z-index:999999;
+                padding:10px;
 
-        box-shadow:
-        0 0 15px #00ffcc;
-      `;
+                border-radius:10px;
 
-      document.body.appendChild(log);
+                box-shadow:
+                0 0 15px #00ff66;
 
-      setTimeout(() => {
+                z-index:999999;
+            `;
 
-        log.remove();
+            document.body.appendChild(log);
 
-      }, 3000);
+            setTimeout(()=>{
 
-    }
+                log.remove();
 
-  }, 12000);
+            },3000);
+
+        }
+
+    },12000);
 
 }
 
 // ======================================
-// 👀 SPOILER RANDOM
+// 👀 SPOILERS RANDOM
 // ======================================
 
-function spoilerRandom() {
+function spoilerRandom(){
 
-  const spoilers = [
+    setInterval(()=>{
 
-    "👀 algo grande se acerca...",
-    "🛠️ nueva mecanica detectada...",
-    "🎮 sistema oculto encontrado...",
-    "📂 archivo secreto localizado...",
-    "⚠️ spoiler bloqueado...",
-    "👁️ acceso restringido...",
-    "💙 gracias por apoyar el proyecto..."
-  ];
+        if(Math.random()>0.7){
 
-  setInterval(() => {
+            const dias =
+                cuentaRegresiva();
 
-    if (Math.random() > 0.7) {
+            const spoilers=[
 
-      const spoiler =
-        document.createElement("div");
+                "🇲🇽 La Update de Independencia se acerca...",
+                "🎆 Nuevos efectos detectados...",
+                "👀 Nuevas funciones preparadas...",
+                "📂 Archivo secreto encontrado...",
+                "🎬 El segundo trailer esta casi listo...",
+                "🔒 La fecha ya fue confirmada...",
+                "⏳ Faltan "+dias+" dias...",
+                "💙 Gracias por apoyar el proyecto."
 
-      spoiler.innerHTML =
-        spoilers[Math.floor(
-          Math.random() *
-          spoilers.length
-        )];
+            ];
 
-      spoiler.style = `
-        position:fixed;
+            const spoiler =
+                document.createElement("div");
 
-        top:50%;
-        left:50%;
+            spoiler.innerHTML=
+                spoilers[
+                    Math.floor(
+                        Math.random()*
+                        spoilers.length
+                    )
+                ];
 
-        transform:
-        translate(-50%,-50%);
+            spoiler.style=`
+                position:fixed;
 
-        color:white;
+                top:50%;
+                left:50%;
 
-        font-size:24px;
+                transform:
+                translate(-50%,-50%);
 
-        font-family:monospace;
+                color:white;
 
-        z-index:999999;
+                font-size:24px;
 
-        text-shadow:
-        0 0 20px #00ffcc;
-      `;
+                font-family:monospace;
 
-      document.body.appendChild(spoiler);
+                z-index:999999;
 
-      setTimeout(() => {
+                text-shadow:
+                0 0 20px #00ff66;
+            `;
 
-        spoiler.remove();
+            document.body.appendChild(spoiler);
 
-      }, 1800);
+            setTimeout(()=>{
 
-    }
+                spoiler.remove();
 
-  }, 15000);
+            },1800);
+
+        }
+
+    },15000);
 
 }
-
 // ======================================
 // 🧠 MENSAJE EN CONSOLA
 // ======================================
+
+console.clear();
 
 console.log(`
 
@@ -217,165 +271,437 @@ console.log(`
 ██████╔╝███████╗ ╚████╔╝
 ╚═════╝ ╚══════╝  ╚═══╝
 
-[ DEV LOG ]
+====================================
 
-Proyecto principal: 98%
-Version movil: 40%
+🇲🇽 UPDATE INDEPENDENCIA 2026
 
-Estado:
-✔ estable
-✔ optimizado
-✔ secretos activos
+====================================
 
-👀 gracias por explorar
+Estado del proyecto
+
+🛠️ Desarrollo...........35%
+
+🎨 Calidad visual.......98%
+
+📱 Versión móvil........Optimizada
+
+🎬 Tráiler 2...........En desarrollo
+
+📂 Archivos secretos...Activos
+
+👀 Easter Eggs.........Preparados
+
+🚀 Evento patrio.......En construcción
+
+====================================
+
+📅 Lanzamiento Oficial
+
+16 DE SEPTIEMBRE 2026
+
+====================================
+
+💙 Gracias por explorar
+el proyecto.
+
+☕ El café sigue siendo
+parte del equipo.
+
+====================================
 
 `);
+
+
+// ======================================
+// ⏳ CONTADOR EN CONSOLA
+// ======================================
+
+setInterval(() => {
+
+    const dias = cuentaRegresiva();
+
+    console.clear();
+
+    console.log(`
+
+██████╗ ███████╗██╗   ██╗
+██╔══██╗██╔════╝██║   ██║
+██║  ██║█████╗  ██║   ██║
+██║  ██║██╔══╝  ╚██╗ ██╔╝
+██████╔╝███████╗ ╚████╔╝
+╚═════╝ ╚══════╝  ╚═══╝
+
+🇲🇽 UPDATE INDEPENDENCIA
+
+⏳ Faltan ${dias} días.
+
+📅 Lanzamiento:
+16 de Septiembre de 2026
+
+🛠️ Desarrollo: 35%
+
+🎨 Calidad visual: 98%
+
+☕ Café consumido:
+Demasiado.
+
+👀 Gracias por explorar.
+
+`);
+
+},10000);
+
 
 // ======================================
 // 🚀 ACTIVAR
 // ======================================
 
 mensajesDev();
+
 devLogs();
+
 spoilerRandom();
 // ==========================
-// 👀 BOTON SECRETO GLOBAL
+// 🇲🇽 BOTONES SECRETOS GLOBAL
 // ==========================
 
-function crearBotonSecreto(id) {
+const TOTAL_SECRETOS = 5;
 
-  // ya encontrado
-  if (
-    localStorage.getItem(
-      "secreto_" + id
-    )
-  ) return;
+function crearBotonSecreto(id){
 
-  const btn =
-    document.createElement(
-      "button"
-    );
+    if(localStorage.getItem("secreto_"+id))
+        return;
 
-  btn.innerHTML = "👀";
+    const btn =
+        document.createElement("button");
 
-  btn.style = `
-  position:fixed;
+    btn.innerHTML="🇲🇽";
 
-  left:${10 + Math.random()*80}%;
+    btn.title="¿Qué será esto?";
 
-  top:${10 + Math.random()*80}%;
+    btn.style=`
+        position:fixed;
 
-  width:45px;
-  height:45px;
+        left:${10+Math.random()*80}%;
 
-  border:none;
+        top:${10+Math.random()*80}%;
 
-  border-radius:50%;
+        width:48px;
+        height:48px;
 
-  background:
-  rgba(255,255,255,0.05);
+        border:none;
 
-  color:white;
+        border-radius:50%;
 
-  opacity:0;
+        background:
+        rgba(255,255,255,.05);
 
-  cursor:pointer;
+        color:white;
 
-  z-index:999999;
+        font-size:22px;
 
-  transition:.3s;
-  `;
+        cursor:pointer;
 
-  document.body.appendChild(
-    btn
-  );
+        opacity:0;
 
-  document.addEventListener(
-    "mousemove",
-    (e) => {
+        z-index:999999;
 
-      const rect =
-      btn.getBoundingClientRect();
+        transition:.3s;
 
-      const distancia =
-      Math.hypot(
+        box-shadow:
+        0 0 15px rgba(255,255,255,.4);
+    `;
 
-      e.clientX -
-      (rect.left + rect.width/2),
+    document.body.appendChild(btn);
 
-      e.clientY -
-      (rect.top + rect.height/2)
+    document.addEventListener("mousemove",(e)=>{
 
-      );
+        const rect=btn.getBoundingClientRect();
 
-      btn.style.opacity =
-      distancia < 120
-      ? "1"
-      : "0";
+        const distancia=Math.hypot(
 
-    }
-  );
+            e.clientX-
+            (rect.left+rect.width/2),
 
-  btn.addEventListener(
-    "click",
-    () => {
+            e.clientY-
+            (rect.top+rect.height/2)
 
-      localStorage.setItem(
-        "secreto_" + id,
-        "true"
-      );
+        );
 
-      btn.remove();
+        btn.style.opacity=
+            distancia<130 ? "1":"0";
 
-      alert(
-        `🔓 Secreto ${id}/5 encontrado`
-      );
+    });
 
-      verificarSecretos();
+    btn.onclick=()=>{
 
-    }
-  );
+        localStorage.setItem(
+            "secreto_"+id,
+            "true"
+        );
+
+        btn.remove();
+
+        mostrarMensaje(
+            "🇲🇽 Archivo secreto "+id+
+            "/"+TOTAL_SECRETOS+
+            " encontrado"
+        );
+
+        verificarSecretos();
+
+    };
 
 }
 
-function verificarSecretos() {
+// ==========================
+// 💬 MENSAJE BONITO
+// ==========================
 
-  let encontrados = 0;
+function mostrarMensaje(texto){
 
-  for(
-    let i = 1;
-    i <= 5;
-    i++
-  ){
+    const div=
+        document.createElement("div");
 
-    if(
-      localStorage.getItem(
-        "secreto_" + i
-      )
-    ){
+    div.innerHTML=texto;
 
-      encontrados++;
+    div.style=`
+        position:fixed;
+
+        top:50%;
+        left:50%;
+
+        transform:
+        translate(-50%,-50%);
+
+        padding:20px;
+
+        border-radius:15px;
+
+        background:
+        rgba(0,0,0,.85);
+
+        color:white;
+
+        font-family:monospace;
+
+        font-size:22px;
+
+        z-index:999999;
+
+        text-align:center;
+
+        box-shadow:
+        0 0 25px #00ff66;
+    `;
+
+    document.body.appendChild(div);
+
+    setTimeout(()=>{
+
+        div.style.transition=".5s";
+        div.style.opacity="0";
+
+    },1800);
+
+    setTimeout(()=>{
+
+        div.remove();
+
+    },2400);
+
+}
+
+// ==========================
+// 🏆 VERIFICAR SECRETOS
+// ==========================
+
+function verificarSecretos(){
+
+    let encontrados=0;
+
+    for(let i=1;i<=TOTAL_SECRETOS;i++){
+
+        if(localStorage.getItem("secreto_"+i))
+            encontrados++;
 
     }
 
-  }
+    if(encontrados===TOTAL_SECRETOS){
 
-  if(
-    encontrados === 5
-  ){
+        localStorage.setItem(
+            "laberintoDesbloqueado",
+            "true"
+        );
 
-    localStorage.setItem(
-      "laberintoDesbloqueado",
-      "true"
-    );
+        mostrarCelebracion();
 
-    alert(
-      "🏆 Has encontrado todos los secretos\n\n🎮 Minijuego desbloqueado"
-    );
+    }
 
-    window.location.href =
-    "laberinto.html";
+}
 
-  }
+// ==========================
+// 🎆 CELEBRACIÓN FINAL
+// ==========================
+
+function mostrarCelebracion(){
+
+    const fondo=
+        document.createElement("div");
+
+    fondo.style=`
+        position:fixed;
+        inset:0;
+
+        background:
+        rgba(0,0,0,.9);
+
+        z-index:999999;
+    `;
+
+    document.body.appendChild(fondo);
+
+    const titulo=
+        document.createElement("div");
+
+    titulo.innerHTML=`
+    🏆<br><br>
+
+    ¡FELICIDADES!
+
+    <br><br>
+
+    Has encontrado
+    los 5 archivos secretos.
+
+    <br><br>
+
+    🇲🇽 Evento de Independencia desbloqueado.
+
+    <br><br>
+
+    🎮 Accediendo al minijuego...
+    `;
+
+    titulo.style=`
+        position:fixed;
+
+        top:50%;
+        left:50%;
+
+        transform:
+        translate(-50%,-50%);
+
+        color:white;
+
+        font-size:28px;
+
+        text-align:center;
+
+        font-family:monospace;
+
+        z-index:1000000;
+
+        text-shadow:
+        0 0 20px #00ff66;
+    `;
+
+    document.body.appendChild(titulo);
+
+    lanzarConfeti();
+
+    setTimeout(()=>{
+
+        window.location.href=
+        "laberinto.html";
+
+    },5000);
+
+}
+
+// ==========================
+// 🎉 CONFETI
+// ==========================
+
+function lanzarConfeti(){
+
+    const colores=[
+        "#009739",
+        "#ffffff",
+        "#ce1126"
+    ];
+
+    for(let i=0;i<120;i++){
+
+        const p=
+            document.createElement("div");
+
+        p.style=`
+            position:fixed;
+
+            width:8px;
+            height:8px;
+
+            border-radius:50%;
+
+            background:${
+                colores[
+                    Math.floor(
+                        Math.random()*3
+                    )
+                ]
+            };
+
+            left:${Math.random()*100}%;
+
+            top:-10px;
+
+            z-index:999999;
+        `;
+
+        document.body.appendChild(p);
+
+        const tiempo=
+            3000+
+            Math.random()*3000;
+
+        p.animate([
+
+            {
+                transform:
+                "translateY(0)"
+            },
+
+            {
+                transform:
+                `translateY(${window.innerHeight+50}px)
+                translateX(${Math.random()*200-100}px)`
+            }
+
+        ],{
+
+            duration:tiempo,
+
+            easing:"linear"
+
+        });
+
+        setTimeout(()=>{
+
+            p.remove();
+
+        },tiempo);
+
+    }
+
+}
+
+// ==========================
+// 🚀 CREAR LOS 5 SECRETOS
+// ==========================
+
+for(let i=1;i<=TOTAL_SECRETOS;i++){
+
+    crearBotonSecreto(i);
 
 }
