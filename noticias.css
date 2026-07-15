@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background:linear-gradient(to bottom,#050505,#101820,#000);
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    position:relative;
+}
+
+#particulas{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+.memorial{
+    position:relative;
+    z-index:2;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+.contenido{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 0 30px rgba(255,255,255,.08);
+}
+
+.foto{
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid rgba(255,255,255,.8);
+    margin-bottom:25px;
+    box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+
+h1{
+    font-size:1.7rem;
+    color:#d6d6d6;
+    font-weight:300;
+}
+
+h2{
+    margin-top:8px;
+    font-size:2.3rem;
+    color:#fff;
+    margin-bottom:25px;
+}
+
+.mensaje{
+    color:#ddd;
+    font-size:18px;
+    line-height:1.9;
+    text-align:justify;
+}
+
+.frase{
+    margin:35px 0;
+    font-style:italic;
+    color:#f0d27a;
+    font-size:18px;
+}
+
+.vela{
+    width:22px;
+    height:90px;
+    background:#f5f5f5;
+    margin:35px auto;
+    border-radius:4px;
+    position:relative;
+}
+
+.llama{
+    width:24px;
+    height:36px;
+    background:gold;
+    position:absolute;
+    top:-28px;
+    left:-1px;
+    border-radius:50% 50% 40% 40%;
+    box-shadow:
+        0 0 10px orange,
+        0 0 25px gold,
+        0 0 40px rgba(255,200,0,.8);
+    animation:flama .18s infinite alternate;
+}
+
+@keyframes flama{
+
+    from{
+        transform:translateX(-2px) scale(.95) rotate(-4deg);
+        background:orange;
+    }
+
+    to{
+        transform:translateX(2px) scale(1.08) rotate(4deg);
+        background:gold;
+    }
+
+}
+
+.descansa{
+    font-size:22px;
+    letter-spacing:2px;
+    color:white;
+    margin-top:10px;
+}
+
+.fecha{
+    margin-top:30px;
+    color:#bdbdbd;
+    font-size:15px;
+}
+
+@media(max-width:700px){
+
+    .contenido{
+        padding:30px 20px;
+    }
+
+    .foto{
+        width:150px;
+        height:150px;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    .mensaje{
+        font-size:16px;
+    }
+
+}
