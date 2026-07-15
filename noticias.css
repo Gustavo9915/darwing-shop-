@@ -5,14 +5,16 @@
     font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:linear-gradient(to bottom,#050505,#101820,#000);
     color:#fff;
     min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
     position:relative;
 }
 
@@ -22,14 +24,17 @@ body{
     width:100%;
     height:100%;
     z-index:0;
+    pointer-events:none;
 }
 
 .memorial{
     position:relative;
     z-index:2;
     width:100%;
+    min-height:100vh;
     display:flex;
     justify-content:center;
+    align-items:flex-start;
     padding:40px 20px;
 }
 
@@ -43,6 +48,8 @@ body{
     border-radius:20px;
     padding:40px;
     box-shadow:0 0 30px rgba(255,255,255,.08);
+    position:relative;
+    z-index:2;
 }
 
 .foto{
@@ -107,7 +114,6 @@ h2{
 }
 
 @keyframes flama{
-
     from{
         transform:translateX(-2px) scale(.95) rotate(-4deg);
         background:orange;
@@ -117,7 +123,6 @@ h2{
         transform:translateX(2px) scale(1.08) rotate(4deg);
         background:gold;
     }
-
 }
 
 .descansa{
@@ -133,6 +138,57 @@ h2{
     font-size:15px;
 }
 
+/* =======================
+   Mensaje del Equipo
+======================= */
+
+.mensaje-equipo{
+    margin-top:60px;
+    padding-top:35px;
+    border-top:1px solid rgba(255,255,255,.15);
+    animation:fadeIn 2s ease;
+}
+
+.mensaje-equipo h2{
+    margin-bottom:20px;
+    color:#fff;
+    font-size:2rem;
+}
+
+.mensaje-equipo p{
+    color:#ddd;
+    line-height:1.9;
+    margin:18px 0;
+    font-size:17px;
+    text-align:center;
+}
+
+.firma{
+    margin-top:30px;
+    font-size:20px;
+    color:#fff;
+    font-weight:bold;
+}
+
+/* =======================
+   Animaciones
+======================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =======================
+   Responsive
+======================= */
+
 @media(max-width:700px){
 
     .contenido{
@@ -144,12 +200,47 @@ h2{
         height:150px;
     }
 
+    h1{
+        font-size:1.5rem;
+    }
+
     h2{
         font-size:1.8rem;
     }
 
     .mensaje{
         font-size:16px;
+        text-align:left;
     }
 
+    .mensaje-equipo h2{
+        font-size:1.5rem;
+    }
+
+    .mensaje-equipo p{
+        font-size:16px;
+    }
+
+    .firma{
+        font-size:18px;
+    }
 }
+.boton_menu{
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #273cf5;
+    color: white;
+    box-shadow: 4px, 4px, 4px, 0px rgba(0, 0, 0, 0.5);
+    /*background: linear-gradient(-45deg, rgba(#273cf5))2% rgba(106, 17, 147, 1) 100%;*/
+    background: purple;
+}
+
+.boton_menu :hover{
+    color: white;
+}
+.menu{
+     width: 70px;
+    margin-bottom: -40px;
+}
+    

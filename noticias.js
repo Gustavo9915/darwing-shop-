@@ -108,3 +108,38 @@ function animar() {
 }
 
 animar();
+// ===============================
+// Mensaje final del equipo
+// ===============================
+
+const mensajeEquipo = document.createElement("section");
+mensajeEquipo.className = "mensaje-equipo";
+
+mensajeEquipo.innerHTML = `
+    <h2>Un último mensaje de todo el equipo</h2>
+
+    <p>
+        Irving, gracias por haber formado parte de este proyecto y de nuestras vidas.
+        Tu talento, dedicación y compañerismo dejaron una huella que nunca será olvidada.
+    </p>
+
+    <p>
+        Cada línea de código, cada idea y cada momento compartido permanecerán
+        en la memoria de quienes tuvimos el privilegio de trabajar contigo.
+    </p>
+
+    <p>
+        Aunque hoy tu ausencia nos duele, tu legado seguirá vivo en este proyecto
+        y en el corazón de todo el equipo.
+    </p>
+
+    <p><strong>Descansa en paz, compañero y amigo.</strong></p>
+
+    <p class="firma">
+        — Con cariño y respeto,<br>
+        <strong>Todo el Equipo de Desarrollo.</strong> 🕊️
+    </p>
+`;
+
+// Lo agrega al final del contenido
+document.querySelector(".contenido").appendChild(mensajeEquipo);
