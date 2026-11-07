@@ -1,707 +1,551 @@
-// ======================================
-// 🇲🇽 UPDATE INDEPENDENCIA 2026
-// ======================================
-
-// Fecha del lanzamiento
-const fechaLanzamiento = new Date("September 16, 2026 00:00:00");
-
-// ======================================
-// ⏳ CUENTA REGRESIVA
-// ======================================
-
-function cuentaRegresiva() {
-
-    const hoy = new Date();
-
-    const diferencia =
-        fechaLanzamiento - hoy;
-
-    const dias =
-        Math.max(
-            0,
-            Math.floor(
-                diferencia /
-                (1000 * 60 * 60 * 24)
-            )
-        );
-
-    return dias;
-
-}
-
-// ======================================
-// 👀 MENSAJES SECRETOS DEL DESARROLLADOR
-// ======================================
-
-function mensajesDev() {
-
-    const dias = cuentaRegresiva();
-
-    const logs = [
-
-        "[DEV] iniciando Update Independencia...",
-        "[DEV] compilando update del 16 de septiembre...",
-        "[DEV] preparando fuegos artificiales...",
-        "[DEV] creando nuevos secretos...",
-        "[DEV] optimizando version movil...",
-        "[DEV] agregando mejoras visuales...",
-        "[DEV] cargando evento patrio...",
-        "[DEV] generando trailer 2...",
-        "[DEV] ocultando archivos secretos...",
-        "[DEV] faltan " + dias + " dias..."
-
-    ];
-
-    setInterval(() => {
-
-        const msg =
-            document.createElement("div");
-
-        msg.innerHTML =
-            logs[
-                Math.floor(
-                    Math.random() *
-                    logs.length
-                )
-            ];
-
-        msg.style = `
-            position:fixed;
-            top:${Math.random()*85}%;
-            left:${Math.random()*85}%;
-
-            color:${
-                ["#00ff66","#ffffff","#ff3333"][
-                    Math.floor(Math.random()*3)
-                ]
-            };
-
-            font-family:monospace;
-
-            font-size:${14 + Math.random()*10}px;
-
-            z-index:999999;
-
-            pointer-events:none;
-
-            opacity:.9;
-
-            text-shadow:
-            0 0 15px white;
-        `;
-
-        document.body.appendChild(msg);
-
-        setTimeout(()=>{
-
-            msg.style.transition=".5s";
-
-            msg.style.opacity="0";
-
-        },1800);
-
-        setTimeout(()=>{
-
-            msg.remove();
-
-        },2500);
-
-    },6000);
-
-}
-
-// ======================================
-// ⚠️ DEV LOGS
-// ======================================
-
-function devLogs() {
-
-    setInterval(()=>{
-
-        if(Math.random()>0.5){
-
-            const dias =
-                cuentaRegresiva();
-
-            const mensajes=[
-
-                "update_independencia.rar 35%",
-                "calidad_visual 98%",
-                "evento patrio preparado",
-                "trailer_02.mp4 listo",
-                "spoiler bloqueado",
-                "nuevas imagenes cargadas",
-                "version movil optimizada",
-                "faltan "+dias+" dias",
-                "16_sep_update.exe",
-                "secretos activos"
-
-            ];
-
-            const log =
-                document.createElement("div");
-
-            log.innerHTML =
-                mensajes[
-                    Math.floor(
-                        Math.random()*
-                        mensajes.length
-                    )
-                ];
-
-            log.style=`
-                position:fixed;
-
-                bottom:20px;
-                left:20px;
-
-                background:rgba(0,0,0,.85);
-
-                color:#00ff66;
-
-                font-family:monospace;
-
-                padding:10px;
-
-                border-radius:10px;
-
-                box-shadow:
-                0 0 15px #00ff66;
-
-                z-index:999999;
-            `;
-
-            document.body.appendChild(log);
-
-            setTimeout(()=>{
-
-                log.remove();
-
-            },3000);
-
-        }
-
-    },12000);
-
-}
-
-// ======================================
-// 👀 SPOILERS RANDOM
-// ======================================
-
-function spoilerRandom(){
-
-    setInterval(()=>{
-
-        if(Math.random()>0.7){
-
-            const dias =
-                cuentaRegresiva();
-
-            const spoilers=[
-
-                "🇲🇽 La Update de Independencia se acerca...",
-                "🎆 Nuevos efectos detectados...",
-                "👀 Nuevas funciones preparadas...",
-                "📂 Archivo secreto encontrado...",
-                "🎬 El segundo trailer esta casi listo...",
-                "🔒 La fecha ya fue confirmada...",
-                "⏳ Faltan "+dias+" dias...",
-                "💙 Gracias por apoyar el proyecto."
-
-            ];
-
-            const spoiler =
-                document.createElement("div");
-
-            spoiler.innerHTML=
-                spoilers[
-                    Math.floor(
-                        Math.random()*
-                        spoilers.length
-                    )
-                ];
-
-            spoiler.style=`
-                position:fixed;
-
-                top:50%;
-                left:50%;
-
-                transform:
-                translate(-50%,-50%);
-
-                color:white;
-
-                font-size:24px;
-
-                font-family:monospace;
-
-                z-index:999999;
-
-                text-shadow:
-                0 0 20px #00ff66;
-            `;
-
-            document.body.appendChild(spoiler);
-
-            setTimeout(()=>{
-
-                spoiler.remove();
-
-            },1800);
-
-        }
-
-    },15000);
-
-}
-// ======================================
-// 🧠 MENSAJE EN CONSOLA
-// ======================================
-
-console.clear();
-
-console.log(`
-
-██████╗ ███████╗██╗   ██╗
-██╔══██╗██╔════╝██║   ██║
-██║  ██║█████╗  ██║   ██║
-██║  ██║██╔══╝  ╚██╗ ██╔╝
-██████╔╝███████╗ ╚████╔╝
-╚═════╝ ╚══════╝  ╚═══╝
-
-====================================
-
-🇲🇽 UPDATE INDEPENDENCIA 2026
-
-====================================
-
-Estado del proyecto
-
-🛠️ Desarrollo...........35%
-
-🎨 Calidad visual.......98%
-
-📱 Versión móvil........Optimizada
-
-🎬 Tráiler 2...........En desarrollo
-
-📂 Archivos secretos...Activos
-
-👀 Easter Eggs.........Preparados
-
-🚀 Evento patrio.......En construcción
-
-====================================
-
-📅 Lanzamiento Oficial
-
-16 DE SEPTIEMBRE 2026
-
-====================================
-
-💙 Gracias por explorar
-el proyecto.
-
-☕ El café sigue siendo
-parte del equipo.
-
-====================================
-
-`);
-
-
-// ======================================
-// ⏳ CONTADOR EN CONSOLA
-// ======================================
-
-setInterval(() => {
-
-    const dias = cuentaRegresiva();
-
-    console.clear();
-
-    console.log(`
-
-██████╗ ███████╗██╗   ██╗
-██╔══██╗██╔════╝██║   ██║
-██║  ██║█████╗  ██║   ██║
-██║  ██║██╔══╝  ╚██╗ ██╔╝
-██████╔╝███████╗ ╚████╔╝
-╚═════╝ ╚══════╝  ╚═══╝
-
-🇲🇽 UPDATE INDEPENDENCIA
-
-⏳ Faltan ${dias} días.
-
-📅 Lanzamiento:
-16 de Septiembre de 2026
-
-🛠️ Desarrollo: 35%
-
-🎨 Calidad visual: 98%
-
-☕ Café consumido:
-Demasiado.
-
-👀 Gracias por explorar.
-
-`);
-
-},10000);
-
-
-// ======================================
-// 🚀 ACTIVAR
-// ======================================
-
-mensajesDev();
-
-devLogs();
-
-spoilerRandom();
-// ==========================
-// 🇲🇽 BOTONES SECRETOS GLOBAL
-// ==========================
-
-const TOTAL_SECRETOS = 5;
-
-function crearBotonSecreto(id){
-
-    if(localStorage.getItem("secreto_"+id))
-        return;
-
-    const btn =
-        document.createElement("button");
-
-    btn.innerHTML="🇲🇽";
-
-    btn.title="¿Qué será esto?";
-
-    btn.style=`
-        position:fixed;
-
-        left:${10+Math.random()*80}%;
-
-        top:${10+Math.random()*80}%;
-
-        width:48px;
-        height:48px;
-
-        border:none;
-
-        border-radius:50%;
-
-        background:
-        rgba(255,255,255,.05);
-
-        color:white;
-
-        font-size:22px;
-
-        cursor:pointer;
-
-        opacity:0;
-
-        z-index:999999;
-
-        transition:.3s;
-
-        box-shadow:
-        0 0 15px rgba(255,255,255,.4);
-    `;
-
-    document.body.appendChild(btn);
-
-    document.addEventListener("mousemove",(e)=>{
-
-        const rect=btn.getBoundingClientRect();
-
-        const distancia=Math.hypot(
-
-            e.clientX-
-            (rect.left+rect.width/2),
-
-            e.clientY-
-            (rect.top+rect.height/2)
-
-        );
-
-        btn.style.opacity=
-            distancia<130 ? "1":"0";
-
-    });
-
-    btn.onclick=()=>{
-
-        localStorage.setItem(
-            "secreto_"+id,
-            "true"
-        );
-
-        btn.remove();
-
-        mostrarMensaje(
-            "🇲🇽 Archivo secreto "+id+
-            "/"+TOTAL_SECRETOS+
-            " encontrado"
-        );
-
-        verificarSecretos();
-
+/* =========================================================
+   DARWING SHOP — DÍA DE MUERTOS 2026
+   Edición renovada: efectos unificados, ligeros y responsivos.
+========================================================= */
+
+(() => {
+  "use strict";
+
+  const CONFIG = {
+    nombre: "DARWING SHOP",
+    evento: "DÍA DE MUERTOS",
+    maxPetalos: 18,
+    maxLuces: 12,
+    intervaloPetalos: 1100,
+    mostrarBienvenida: true,
+    bienvenidaUnaVez: true
+  };
+
+  const reducirMovimiento = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const estilos = `
+    :root {
+      --dm-noche: #160d24;
+      --dm-vino: #35152e;
+      --dm-morado: #54213c;
+      --dm-naranja: #ff9418;
+      --dm-dorado: #ffc66b;
+      --dm-crema: #ffe8cb;
+    }
+
+    body {
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(126, 52, 83, .34), transparent 38%),
+        radial-gradient(ellipse at 90% 20%, rgba(214, 107, 32, .13), transparent 32%),
+        linear-gradient(140deg, #100b1c, #28132e 48%, #401b2b 78%, #160d24) !important;
+      background-attachment: fixed !important;
+      color: var(--dm-crema);
+    }
+
+    header {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(120deg, #170d27, #512039, #28132e) !important;
+      border-bottom: 3px solid var(--dm-dorado);
+      box-shadow: 0 5px 24px rgba(233, 121, 32, .28);
+    }
+
+    .titulos h1 {
+      color: #ffb342;
+      text-shadow: 0 0 12px rgba(255, 117, 24, .8);
+    }
+
+    footer {
+      background: linear-gradient(120deg, #170d27, #35152d) !important;
+      border-top: 2px solid #e98b32;
+    }
+
+    .imagen_box {
+      background: linear-gradient(145deg, #29182f, #421e32) !important;
+      border: 1px solid #b86a2c !important;
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .24);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .imagen_box:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 0 24px rgba(255, 140, 39, .34) !important;
+    }
+
+    .imagen_box img {
+      transition: transform .45s ease, filter .45s ease;
+    }
+
+    .imagen_box:hover img {
+      transform: scale(1.035);
+      filter: brightness(1.08);
+    }
+
+    .btn_compra,
+    .imagen_box button {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .btn_compra:hover,
+    .imagen_box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 14px rgba(255, 117, 24, .5);
+    }
+
+    .dm-papel-picado {
+      display: flex;
+      justify-content: center;
+      gap: clamp(5px, 1.4vw, 14px);
+      padding: 10px 5px;
+      overflow: hidden;
+      background: rgba(26, 16, 37, .92);
+      border-bottom: 2px dashed #e98b32;
+    }
+
+    .dm-papel-picado span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      font-size: clamp(17px, 2.5vw, 25px);
+      animation: dm-papel 2.8s ease-in-out infinite alternate;
+    }
+
+    .dm-ofrenda {
+      position: relative;
+      max-width: 950px;
+      margin: 26px auto;
+      padding: 22px clamp(14px, 4vw, 30px);
+      text-align: center;
+      color: #ffe8cb;
+      background: linear-gradient(125deg, rgba(50, 20, 45, .96), rgba(84, 38, 45, .96));
+      border: 1px solid #df8b2c;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, .25), 0 0 20px rgba(185, 91, 36, .18);
+    }
+
+    .dm-ofrenda h2 {
+      margin: 10px 0;
+      color: #ffb342;
+      text-shadow: 0 0 10px rgba(255, 145, 24, .35);
+    }
+
+    .dm-ofrenda p {
+      line-height: 1.8;
+      margin: 10px auto;
+      max-width: 720px;
+    }
+
+    .dm-ofrenda-deco {
+      font-size: clamp(24px, 4vw, 36px);
+      letter-spacing: 5px;
+    }
+
+    .dm-cinta {
+      margin: 18px 0;
+      padding: 12px 10px;
+      text-align: center;
+      color: white;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #762d24, #bd5b20, #762d24);
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .18);
+    }
+
+    .dm-petalo {
+      position: fixed;
+      top: -45px;
+      z-index: 9000;
+      pointer-events: none;
+      user-select: none;
+      will-change: transform, opacity;
+      animation: dm-caida linear forwards;
+    }
+
+    .dm-luz {
+      position: fixed;
+      z-index: 8999;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: #ffbd52;
+      box-shadow: 0 0 12px 4px rgba(255, 117, 24, .6);
+      animation: dm-luz 4s ease-in-out infinite alternate;
+    }
+
+    #dm-progreso {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 20001;
+      width: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #ff7518, #ffce66, #d94c21);
+      box-shadow: 0 0 12px #ff9418;
+    }
+
+    .dm-revelar {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .dm-revelar.dm-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dm-boton,
+    .dm-cerrar {
+      border: 1px solid rgba(255, 210, 140, .65);
+      border-radius: 999px;
+      padding: 11px 17px;
+      color: #fff;
+      background: linear-gradient(135deg, #a9441d, #e47720);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, .25);
+      transition: transform .2s ease, filter .2s ease;
+    }
+
+    .dm-boton:hover,
+    .dm-cerrar:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.12);
+    }
+
+    #dm-mensaje-btn {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 9500;
+    }
+
+    .dm-capa {
+      position: fixed;
+      inset: 0;
+      z-index: 30000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(8, 5, 13, .84);
+      backdrop-filter: blur(7px);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    .dm-capa.dm-abierta {
+      opacity: 1;
+    }
+
+    .dm-ventana {
+      width: min(100%, 490px);
+      max-height: min(85vh, 720px);
+      overflow: auto;
+      padding: clamp(22px, 5vw, 34px);
+      text-align: center;
+      color: #ffe8cb;
+      background: linear-gradient(145deg, #24102f, #54213c, #32152d);
+      border: 1px solid #ffae35;
+      border-radius: 22px;
+      box-shadow: 0 0 35px rgba(255, 117, 24, .28);
+      transform: translateY(14px) scale(.98);
+      transition: transform .3s ease;
+    }
+
+    .dm-capa.dm-abierta .dm-ventana {
+      transform: translateY(0) scale(1);
+    }
+
+    .dm-ventana h2 {
+      color: #ffb342;
+      text-shadow: 0 0 12px rgba(255, 117, 24, .55);
+    }
+
+    .dm-ventana p {
+      line-height: 1.8;
+    }
+
+    .dm-emoji-grande {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+
+    @keyframes dm-papel {
+      from { transform: rotate(-6deg) translateY(0); }
+      to { transform: rotate(6deg) translateY(3px); }
+    }
+
+    @keyframes dm-caida {
+      0% { transform: translate3d(0, -5vh, 0) rotate(0); opacity: 0; }
+      12% { opacity: .9; }
+      100% { transform: translate3d(var(--dm-deriva), 110vh, 0) rotate(560deg); opacity: 0; }
+    }
+
+    @keyframes dm-luz {
+      from { opacity: .2; transform: translateY(8px); }
+      to { opacity: .95; transform: translateY(-18px); }
+    }
+
+    @media (max-width: 600px) {
+      .dm-ofrenda { margin: 18px 12px; }
+      #dm-mensaje-btn { left: 12px; bottom: 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+      .dm-revelar { opacity: 1; transform: none; }
+    }
+  `;
+
+  function agregarEstilos() {
+    if (document.getElementById("dm-estilos-renovados")) return;
+    const style = document.createElement("style");
+    style.id = "dm-estilos-renovados";
+    style.textContent = estilos;
+    document.head.appendChild(style);
+  }
+
+  function crearElemento(tag, clase, texto) {
+    const el = document.createElement(tag);
+    if (clase) el.className = clase;
+    if (texto !== undefined) el.textContent = texto;
+    return el;
+  }
+
+  function mostrarModal({ titulo, contenido, boton = "Cerrar ✨", emoji = "🌼🕯️💀" }) {
+    const capa = crearElemento("div", "dm-capa");
+    capa.setAttribute("role", "dialog");
+    capa.setAttribute("aria-modal", "true");
+    capa.setAttribute("aria-label", titulo);
+
+    const ventana = crearElemento("div", "dm-ventana");
+    const decoracion = crearElemento("div", "dm-emoji-grande", emoji);
+    const encabezado = crearElemento("h2", "", titulo);
+    const texto = crearElemento("div");
+    texto.innerHTML = contenido;
+
+    const cerrar = crearElemento("button", "dm-cerrar", boton);
+    cerrar.type = "button";
+
+    ventana.append(decoracion, encabezado, texto, cerrar);
+    capa.appendChild(ventana);
+    document.body.appendChild(capa);
+
+    const cerrarModal = () => {
+      capa.classList.remove("dm-abierta");
+      setTimeout(() => capa.remove(), 300);
+      document.removeEventListener("keydown", teclaEscape);
     };
 
-}
+    const teclaEscape = (event) => {
+      if (event.key === "Escape") cerrarModal();
+    };
 
-// ==========================
-// 💬 MENSAJE BONITO
-// ==========================
+    cerrar.addEventListener("click", cerrarModal);
+    capa.addEventListener("click", (event) => {
+      if (event.target === capa) cerrarModal();
+    });
+    document.addEventListener("keydown", teclaEscape);
 
-function mostrarMensaje(texto){
+    requestAnimationFrame(() => capa.classList.add("dm-abierta"));
+    cerrar.focus();
+  }
 
-    const div=
-        document.createElement("div");
+  function bienvenida() {
+    if (!CONFIG.mostrarBienvenida) return;
 
-    div.innerHTML=texto;
+    const clave = "darwingShopBienvenidaDM2026";
+    if (CONFIG.bienvenidaUnaVez && localStorage.getItem(clave)) return;
 
-    div.style=`
-        position:fixed;
+    mostrarModal({
+      titulo: "¡ESTAMOS DE REGRESO!",
+      emoji: "🎃 🕯️ 🌼",
+      boton: "¡Explorar la página!",
+      contenido: `
+        <p>Después de varios meses sin actualizaciones, ¡por fin volvimos!</p>
+        <p>Darwing Shop regresa con una decoración especial, mejoras visuales y algunos detalles escondidos para descubrir.</p>
+        <p>Gracias a quienes siguen visitando y apoyando este pequeño proyecto. Cada visita y cada muestra de apoyo nos anima a continuar.</p>
+        <p><strong style="color:#ffb342">Esto no es solamente una actualización: es el comienzo de una nueva etapa.</strong></p>
+        <p>— El desarrollador de Darwing Shop 💛</p>
+      `
+    });
 
-        top:50%;
-        left:50%;
+    localStorage.setItem(clave, "1");
+  }
 
-        transform:
-        translate(-50%,-50%);
+  function mensajeEspecial() {
+    const boton = crearElemento("button", "dm-boton", "🕯️ Mensaje especial");
+    boton.id = "dm-mensaje-btn";
+    boton.type = "button";
+    boton.addEventListener("click", () => {
+      mostrarModal({
+        titulo: "Una tradición que vive en nosotros",
+        contenido: `
+          <p>Hoy recordamos con cariño a quienes dejaron una huella en nuestras vidas.</p>
+          <p>Cada vela ilumina un recuerdo, cada flor representa un camino y cada fotografía guarda una historia.</p>
+          <p>Aunque pase el tiempo, los recuerdos y las enseñanzas permanecen con nosotros.</p>
+          <p><strong style="color:#ffb342">Que nunca mueran los recuerdos. 🧡</strong></p>
+          <p>Con cariño, <strong>Darwing Shop</strong>.</p>
+        `
+      });
+    });
+    document.body.appendChild(boton);
+  }
 
-        padding:20px;
+  function decoracionSuperior() {
+    const header = document.querySelector("header");
+    if (!header || document.querySelector(".dm-papel-picado")) return;
 
-        border-radius:15px;
+    const papel = crearElemento("div", "dm-papel-picado");
+    ["🏵️", "🌼", "💀", "🕯️", "🌼", "🏵️", "🕯️", "💀", "🌼", "🏵️", "🕯️"].forEach((simbolo, i) => {
+      const pieza = crearElemento("span", "", simbolo);
+      pieza.style.animationDelay = `${(i % 5) * .22}s`;
+      papel.appendChild(pieza);
+    });
+    header.after(papel);
+  }
 
-        background:
-        rgba(0,0,0,.85);
+  function agregarOfrendaYCinta() {
+    const tienda = document.querySelector(".container");
+    if (!tienda || document.querySelector(".dm-ofrenda")) return;
 
-        color:white;
-
-        font-family:monospace;
-
-        font-size:22px;
-
-        z-index:999999;
-
-        text-align:center;
-
-        box-shadow:
-        0 0 25px #00ff66;
+    const ofrenda = crearElemento("section", "dm-ofrenda");
+    ofrenda.innerHTML = `
+      <div class="dm-ofrenda-deco">🌼 🕯️ 💀 🕯️ 🌼</div>
+      <h2>Una tradición que vive en nosotros</h2>
+      <p>En este Día de Muertos celebramos nuestras raíces, recordamos a quienes dejaron huella en nuestras vidas y mantenemos vivas nuestras tradiciones.</p>
+      <div class="dm-ofrenda-deco">🏵️ 🧡 🏵️</div>
     `;
 
-    document.body.appendChild(div);
+    const cinta = crearElemento(
+      "div",
+      "dm-cinta",
+      "🌼 DARWING SHOP  •  ACTUALIZACIÓN ESPECIAL 2026  •  DÍA DE MUERTOS 💀"
+    );
 
-    setTimeout(()=>{
+    tienda.before(ofrenda);
+    tienda.after(cinta);
+  }
 
-        div.style.transition=".5s";
-        div.style.opacity="0";
+  function iniciarPetalos() {
+    if (reducirMovimiento) return;
 
-    },1800);
+    const simbolos = ["🌼", "🏵️", "🍂"];
+    let activos = 0;
 
-    setTimeout(()=>{
+    const crearPetalo = () => {
+      if (document.hidden || activos >= CONFIG.maxPetalos) return;
 
-        div.remove();
+      activos++;
+      const petalo = crearElemento(
+        "span",
+        "dm-petalo",
+        simbolos[Math.floor(Math.random() * simbolos.length)]
+      );
 
-    },2400);
+      const duracion = 7 + Math.random() * 5;
+      petalo.style.left = `${Math.random() * 100}vw`;
+      petalo.style.fontSize = `${15 + Math.random() * 15}px`;
+      petalo.style.setProperty("--dm-deriva", `${Math.random() * 150 - 75}px`);
+      petalo.style.animationDuration = `${duracion}s`;
 
-}
+      petalo.addEventListener("animationend", () => {
+        petalo.remove();
+        activos--;
+      }, { once: true });
 
-// ==========================
-// 🏆 VERIFICAR SECRETOS
-// ==========================
+      document.body.appendChild(petalo);
+    };
 
-function verificarSecretos(){
+    setInterval(crearPetalo, CONFIG.intervaloPetalos);
+  }
 
-    let encontrados=0;
+  function iniciarLuces() {
+    if (reducirMovimiento) return;
 
-    for(let i=1;i<=TOTAL_SECRETOS;i++){
-
-        if(localStorage.getItem("secreto_"+i))
-            encontrados++;
-
+    for (let i = 0; i < CONFIG.maxLuces; i++) {
+      const luz = crearElemento("div", "dm-luz");
+      luz.style.left = `${Math.random() * 100}vw`;
+      luz.style.top = `${Math.random() * 100}vh`;
+      luz.style.animationDelay = `${Math.random() * 4}s`;
+      document.body.appendChild(luz);
     }
+  }
 
-    if(encontrados===TOTAL_SECRETOS){
+  function barraProgreso() {
+    const barra = crearElemento("div");
+    barra.id = "dm-progreso";
+    document.body.appendChild(barra);
 
-        localStorage.setItem(
-            "laberintoDesbloqueado",
-            "true"
-        );
+    let programado = false;
+    const actualizar = () => {
+      const recorrido = document.documentElement.scrollHeight - window.innerHeight;
+      const porcentaje = recorrido > 0 ? (window.scrollY / recorrido) * 100 : 0;
+      barra.style.width = `${Math.min(100, Math.max(0, porcentaje))}%`;
+      programado = false;
+    };
 
-        mostrarCelebracion();
+    window.addEventListener("scroll", () => {
+      if (!programado) {
+        requestAnimationFrame(actualizar);
+        programado = true;
+      }
+    }, { passive: true });
 
+    actualizar();
+  }
+
+  function revelarTarjetas() {
+    const tarjetas = document.querySelectorAll(".imagen_box");
+    if (!tarjetas.length) return;
+
+    if (reducirMovimiento || !("IntersectionObserver" in window)) return;
+
+    const observador = new IntersectionObserver((entradas, observer) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("dm-visible");
+          observer.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    tarjetas.forEach((tarjeta) => {
+      tarjeta.classList.add("dm-revelar");
+      observador.observe(tarjeta);
+    });
+  }
+
+  function iniciar() {
+    agregarEstilos();
+    decoracionSuperior();
+    agregarOfrendaYCinta();
+    mensajeEspecial();
+    barraProgreso();
+    revelarTarjetas();
+    iniciarPetalos();
+    iniciarLuces();
+
+    console.info(
+      `%c${CONFIG.nombre} — ${CONFIG.evento} 2026%c\n🌼 Decoración activada\n🕯️ Ofrenda cargada\n✨ Efectos visuales listos\n💛 Gracias por visitar el proyecto`,
+      "color:#ffb342;font-size:16px;font-weight:bold",
+      "color:#ffe8cb"
+    );
+
+    if (CONFIG.mostrarBienvenida) {
+      setTimeout(bienvenida, 700);
     }
+  }
 
-}
-
-// ==========================
-// 🎆 CELEBRACIÓN FINAL
-// ==========================
-
-function mostrarCelebracion(){
-
-    const fondo=
-        document.createElement("div");
-
-    fondo.style=`
-        position:fixed;
-        inset:0;
-
-        background:
-        rgba(0,0,0,.9);
-
-        z-index:999999;
-    `;
-
-    document.body.appendChild(fondo);
-
-    const titulo=
-        document.createElement("div");
-
-    titulo.innerHTML=`
-    🏆<br><br>
-
-    ¡FELICIDADES!
-
-    <br><br>
-
-    Has encontrado
-    los 5 archivos secretos.
-
-    <br><br>
-
-    🇲🇽 Evento de Independencia desbloqueado.
-
-    <br><br>
-
-    🎮 Accediendo al minijuego...
-    `;
-
-    titulo.style=`
-        position:fixed;
-
-        top:50%;
-        left:50%;
-
-        transform:
-        translate(-50%,-50%);
-
-        color:white;
-
-        font-size:28px;
-
-        text-align:center;
-
-        font-family:monospace;
-
-        z-index:1000000;
-
-        text-shadow:
-        0 0 20px #00ff66;
-    `;
-
-    document.body.appendChild(titulo);
-
-    lanzarConfeti();
-
-    setTimeout(()=>{
-
-        window.location.href=
-        "laberinto.html";
-
-    },5000);
-
-}
-
-// ==========================
-// 🎉 CONFETI
-// ==========================
-
-function lanzarConfeti(){
-
-    const colores=[
-        "#009739",
-        "#ffffff",
-        "#ce1126"
-    ];
-
-    for(let i=0;i<120;i++){
-
-        const p=
-            document.createElement("div");
-
-        p.style=`
-            position:fixed;
-
-            width:8px;
-            height:8px;
-
-            border-radius:50%;
-
-            background:${
-                colores[
-                    Math.floor(
-                        Math.random()*3
-                    )
-                ]
-            };
-
-            left:${Math.random()*100}%;
-
-            top:-10px;
-
-            z-index:999999;
-        `;
-
-        document.body.appendChild(p);
-
-        const tiempo=
-            3000+
-            Math.random()*3000;
-
-        p.animate([
-
-            {
-                transform:
-                "translateY(0)"
-            },
-
-            {
-                transform:
-                `translateY(${window.innerHeight+50}px)
-                translateX(${Math.random()*200-100}px)`
-            }
-
-        ],{
-
-            duration:tiempo,
-
-            easing:"linear"
-
-        });
-
-        setTimeout(()=>{
-
-            p.remove();
-
-        },tiempo);
-
-    }
-
-}
-
-// ==========================
-// 🚀 CREAR LOS 5 SECRETOS
-// ==========================
-
-for(let i=1;i<=TOTAL_SECRETOS;i++){
-
-    crearBotonSecreto(i);
-
-}
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", iniciar, { once: true });
+  } else {
+    iniciar();
+  }
+})();
