@@ -1,0 +1,343 @@
+
+/* =====================================
+   DRAWINGS SHOP - DESCUENTOS
+   Temática: Día de Muertos
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #170d25;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    background: linear-gradient(120deg, #28113e, #48145f, #7b285e);
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 3px solid #f6a623;
+    box-shadow: 0 5px 20px #0008;
+}
+
+.logo h1 {
+    color: #ffb52e;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    color: #e7c9f5;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+nav a:hover,
+nav a.activo {
+    background: #f39c24;
+    color: #28113e;
+    transform: translateY(-3px);
+}
+
+/* BIENVENIDA */
+
+.bienvenida {
+    text-align: center;
+    padding: 75px 20px;
+    background:
+        linear-gradient(#180b2bdc, #301044df),
+        radial-gradient(circle at top, #a34c73, #1b0c2b);
+    border-bottom: 1px solid #a65c9b;
+}
+
+.bienvenida h2 {
+    color: #ffb52e;
+    font-size: clamp(28px, 5vw, 43px);
+    margin-bottom: 18px;
+    text-shadow: 0 0 15px #ff9d35;
+}
+
+.bienvenida p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+    font-size: 17px;
+    color: #f0dff7;
+}
+
+.bienvenida span {
+    display: block;
+    margin-top: 20px;
+    color: #ffb52e;
+    font-weight: bold;
+}
+
+/* PROMOCIONES */
+
+.promociones {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.promociones h2 {
+    color: #ffb52e;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.contenedor-descuentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 28px;
+}
+
+/* TARJETAS */
+
+.tarjeta {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #38204d, #241433);
+    border: 1px solid #75418c;
+    border-radius: 20px;
+    padding: 35px 23px;
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: #ff9e2415;
+    border-radius: 50%;
+    top: -75px;
+    right: -65px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px #0008;
+    border-color: #ffb52e;
+}
+
+.tarjeta.especial {
+    background: linear-gradient(145deg, #65264e, #35133f);
+    border: 2px solid #f6a623;
+    box-shadow: 0 0 20px #f39c2430;
+}
+
+.descuento {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f39c24;
+    color: #28113e;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.icono {
+    font-size: 55px;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 0 10px #f39c2460);
+}
+
+.tarjeta h3 {
+    color: #ffbd50;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #e4d4ed;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.tarjeta small {
+    margin-top: 18px;
+    color: #bda9ca;
+}
+
+/* CODIGOS */
+
+.codigo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.codigo span {
+    background: #160d20;
+    color: #ffbf4b;
+    border: 1px dashed #f6a623;
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.codigo button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #f39c24, #ffca58);
+    color: #28113e;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.codigo button:hover {
+    background: #fff0b0;
+    transform: scale(1.04);
+}
+
+/* AVISO */
+
+.aviso {
+    margin: 20px 7% 65px;
+    padding: 30px;
+    text-align: center;
+    background: #29163b;
+    border-left: 5px solid #f39c24;
+    border-radius: 12px;
+}
+
+.aviso h2 {
+    color: #ffbd50;
+    margin-bottom: 18px;
+}
+
+.aviso p {
+    color: #ddcce9;
+    line-height: 1.8;
+    margin: 8px 0;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    background: #100819;
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 2px solid #6e347d;
+}
+
+footer h3 {
+    color: #ffb52e;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+footer p {
+    color: #c7b4d3;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarjeta {
+    animation: aparecer 0.7s ease both;
+}
+
+.tarjeta:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.tarjeta:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+
+    .bienvenida {
+        padding: 50px 18px;
+    }
+
+    .promociones {
+        padding: 45px 6%;
+    }
+
+    .promociones h2 {
+        font-size: 26px;
+    }
+
+    .tarjeta {
+        min-height: 350px;
+    }
+
+    .aviso {
+        margin: 15px 6% 45px;
+        padding: 22px;
+    }
+}
